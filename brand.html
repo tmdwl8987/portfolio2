@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 BRAND</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+
+    <style>
+        body {background: #212121; width: 100%; height: 100%;}
+        #header_text {text-indent: -9999px;}
+        #brand_wrap {}
+        .brand_txt {color: #a6a6a6; font-size: 1.5vw; line-height: 1.5;}
+        .brand_txt strong {color: #e1e3e4;}
+        .wrap_box {width: 80%; margin: 0 auto;}
+        
+        .wrap_box1 {width: 100%; padding-top: 10vh; position: relative;}
+        .brand_img1 img {width: 100%;}
+        .brand_txt1 {font-size: 2vw; text-align: right; position: absolute; top: 70%; right: 10%; color: #e1e3e4; line-height: 1.7;}
+        
+        .wrap_box2 {position: relative; height: 130vh;}
+        .brand_img2 {}
+        .brand_img2 img:nth-child(1) {position: relative; left: 5vw; top: 15vh; width: 20%;}
+        .brand_img2 img:nth-child(2) {position: absolute; top: 24vh; right: 0; width: 55%;}
+        .brand_txt2 {display: inline-block; position: relative; top: 20vh; left: 8vw; color: #e1e3e4;}
+        
+        .wrap_box3 {position: relative;  height: 120vh;}
+        .brand_img3 video { position: relative; top: 3vw; left: 0;}
+        .brand_img3 img { position: relative; top: 10vw; left: 5vw; width: 20%;}
+        
+        .brand_txt3 {text-align: right; position: absolute; top: -4vw; right: 5vw;}
+        .brand_txt3 p {display: none;}
+        
+        .wrap_box4 {position: relative; height: 130vh;}
+        .brand_img4 img:nth-child(1) {width: 20%; position: relative; top: 22vh; left: 0;}
+        .brand_img4 img:nth-child(2) {width: 15%; position: relative; top: 35vh; left: 7vw;}
+        .brand_img4 video {position: absolute; top: 42vh; right: 0;}
+        .brand_txt4 {height: 30vh;}
+
+        
+        @media screen and (min-width:1280px) and (max-width:1599px) {
+        .wrap_box2 {height: 90vh;}
+        .wrap_box3 {height: 80vh;}
+        .wrap_box4 {height: 90vh;}
+        .brand_img4 img:nth-child(1) {top: 5vh;}
+        .brand_img4 img:nth-child(2) {top: 15vh;}
+        .brand_img4 video {top: 25vh;}
+        }
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+        .wrap_box1 {padding-top: 5vh;}
+        .wrap_box2 {height: 65vh;}
+        .wrap_box3 {height: 55vh;}
+        .wrap_box4 {height: 65vh;}
+        .brand_img4 img:nth-child(1) {top: -7vh;}
+        .brand_img4 img:nth-child(2) {top: 0vh;}
+        .brand_img4 video {top: 20vh;}
+        }
+        @media screen and (min-width:640px) and (max-width:1023px) {
+        .brand_txt {font-size: 2vw;}
+        .brand_txt1 {font-size: 2.5vw;}
+        .wrap_box {width: 90%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 5vh;}
+        .wrap_box2 {height: 65vh;}
+        .wrap_box3 {height: 55vh;}
+        .wrap_box4 {height: 65vh;}
+        .brand_img4 img:nth-child(1) {top: -7vh;}
+        .brand_img4 img:nth-child(2) {top: 0vh;}
+        .brand_img4 video {top: 20vh;}
+        }
+        @media screen and (min-width:480px) and (max-width:639px) {
+        #m_header_box div:nth-child(1) a img {display: none;}
+        #m_header_box div:nth-child(2) a img {display: block;}
+        #m_header_box ul #brand {display: block; position: absolute; right: 55px; top: 22px;}
+        .brand_txt {font-size: 2.5vw;}
+        .brand_txt p {display: block;}
+        .brand_txt1 {font-size: 2.5vw;}
+        .wrap_box {width: 96%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 0vh;}
+        .wrap_box2 {height: 55vh;}
+        .wrap_box3 {height: 40vh;}
+        .wrap_box4 {height: 55vh;}
+
+        .brand_img2 img:nth-child(1) {display: none;}
+        .brand_img2 img:nth-child(2) {width: 70%; top: 10vh;}
+        .brand_txt2 {display: inline-block; position: relative; top: 30vh; left: 3vw;}
+        .brand_txt3 {top: -13vw;}
+        .brand_img4 img:nth-child(1) {width: 30%; top: 2vh; left: 0vw;}
+        .brand_img4 img:nth-child(2) {display: none;}
+        .brand_img4 video { width: 70%; top: 20vh;}  
+        }
+        @media screen and (max-width:479px) {
+        #m_header_box div:nth-child(1) a img {display: none;}
+        #m_header_box div:nth-child(2) a img {display: block;}
+        #m_header_box ul #brand {display: block; position: absolute; right: 55px; top: 22px;}
+        .brand_txt {font-size: 2.5vw;}
+        .brand_txt p {display: block;}
+        .brand_txt1 {font-size: 2.5vw;}
+        .wrap_box {width: 96%; margin: 0 auto;}
+        .wrap_box1 {width: 100%; padding-top: 0vh;}
+        .wrap_box2 {height: 55vh;}
+        .wrap_box3 {height: 40vh;}
+        .wrap_box4 {height: 55vh;}
+
+        .brand_img2 img:nth-child(1) {display: none;}
+        .brand_img2 img:nth-child(2) {width: 70%; top: 10vh;}
+        .brand_txt2 {display: inline-block; position: relative; top: 27vh; left: 3vw;}
+        .brand_txt3 {top: -17vw;}
+        .brand_img4 img:nth-child(1) {width: 30%; top: 2vh; left: 0vw;}
+        .brand_img4 img:nth-child(2) {display: none;}
+        .brand_img4 video { width: 70%; top: 20vh;}  
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div id="m_header"></div>
+    <div id="brand_wrap">
+        <div class="wrap_box wrap_box1">
+            <div class="brand_img brand_img1"><img src="sub_other_img/brand1.png" alt=""></div>
+            <div class="brand_txt brand_txt1">매드포갈릭은 2001년 론칭한 국내 순수 개발 브랜드로,<br>마늘과 와인으로 콘셉트를 특화한 이탈리안 레스토랑입니다.</div> 
+        </div>
+        <div class="wrap_box wrap_box2">
+            <div class="brand_img brand_img2">
+                <img src="sub_other_img/brand2.jpg" alt="">
+                <img src="sub_other_img/brand3.jpg" alt="">
+            </div>
+            <div class="brand_txt brand_txt2">매드포갈릭의 'Creative Way'로 개발된 창작메뉴와<br>독자적인 프라이빗 브랜드 와인(Mad Wine) 페어링은<br>'오직 매드포갈릭' 에서만 누릴 수 있는 특별한 가치입니다.</div>
+        </div>
+        <div class="wrap_box wrap_box3">
+            <div class="brand_txt brand_txt3"><strong>프라이빗 브랜드 와인 (Mad Wine)</strong>은<p></p> 와인라벨의 독창적인 디자인 아트웍과 함께<br>이탈리아, 프랑스, 스페인 등<p></p>유서깊은 정통 유럽 와이너리에서 생산된 와인만을 엄선합니다.</div>
+            <div class="brand_img brand_img3">
+                <video width="55%" autoplay muted loop>
+                    <source src="sub_other_img/brand4.mp4" type="video/mp4"/>
+                </video>
+                <img src="sub_other_img/brand5.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrap_box wrap_box4">
+            <div class="brand_txt brand_txt4">
+                매드포갈릭은 경상북도 의성군 마늘농장에서<br>연간 350t에 달하는 마늘을 사용하며 최상의 식재료만을 고집합니다.<br><br>
+                
+                <strong>24시간 숙성한 생 도우 피자, <p></p>20여가지에 달하는 매드포갈릭만의 수제 특제 소스,<br>다양한 조리법으로 마늘의 풍미를 더한 시크릿 레시피</strong>는 <p></p>매드포갈릭의 프라이드입니다.
+            </div>
+            <div class="brand_img brand_img4">
+               <img src="sub_other_img/brand6.PNG" alt="">
+               <img src="sub_other_img/brand7.PNG" alt="">
+                <video width="55%" autoplay muted loop>
+                    <source src="sub_other_img/brand8.mp4" type="video/mp4"/>
+                </video>
+            </div>
+        </div>
+                
+    </div>
+    <footer></footer>
+</body>
+</html>

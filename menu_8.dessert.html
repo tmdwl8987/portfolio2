@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 MENU_DESSERT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var menu_img = $("#menu_box tr td .menu_img");
+            var sub = $("#menu_box tr td .hover_wrap_menu");
+            sub.hide();
+            menu_img.mouseenter(function(){
+                $(this).find(".hover_wrap_menu").stop().show();
+            });
+            menu_img.mouseleave(function(){
+                $(this).find(".hover_wrap_menu").stop().hide();
+            });
+        });
+    </script>
+    <style>
+        body {background: #e1e3e4; width: 100%; height: 100%;}
+        #menu {width: 80%; margin: 0 auto;}
+        #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px;}
+        #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 40px; margin: 0 auto;}
+        #menu_title div img {width: 100%;}
+        
+        #menu_box {width: 100%; margin-bottom: 20vh;}
+        #menu_box td {padding: 2vh 1vw; position: relative;}
+        #menu_box td .menu_img .menu_pc {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; cursor: pointer;}
+        #menu_box td .menu_img .menu_m {display: none;}
+        #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 9vh; padding: 2vh; position: relative;}
+        #menu_box td .menu_txt strong {font-size: 2vh; position: relative; left: 0; top: 0;}
+        #menu_box td .menu_txt div {font-size: 2vh; position: absolute; right: 1.5vw; top: 2vh; width: 1.5vh;}
+        #menu_box td .menu_txt div img {width: 100%;}
+        #menu_box td .menu_txt p {font-size: 1.8vh; position: absolute; right: 1.5vw; bottom: 2vh; display: inline-block;}
+        
+        .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 2vh; left: 1vw; z-index: 10; width: calc(100% - (4vw / 2)); height: calc(100% - (8vh / 2)); display: table; font-size: 1vw; padding: 3vw;}
+        .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 2vw; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.3;}
+        .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 3vh; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
+        
+        
+        
+/*        @media screen and (min-width:1280px) and (max-width:1599px) {}*/
+        
+        @media screen and (min-width:1024px) and (max-width:1279px) {
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 34px; margin: 0 auto;}
+            #menu_box {margin-bottom: 15vh;}
+            #menu_box td {padding: 2vh 1vw; border-spacing: 2vh 1vw; position: relative;}
+            #menu_box td .menu_txt {height: 7vh;}
+            #menu_box td .menu_txt strong {font-size: 1.7vh;}
+            #menu_box td .menu_txt p {font-size: 1.5vh;}
+            .hover_wrap {background: rgba(0,0,0,0.8); position: absolute; top: 2vh; left: 1vw; z-index: 10; width: calc(100% - (4vw / 2)); height: calc(100% - (8vh / 2)); display: table; font-size: 1vw; padding: 3vw;}
+        }
+        @media screen and (min-width:640px) and (max-width:1023px) {
+            #menu {width: 90%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 3vh; width: 30px; margin: 0 auto;}
+            #menu_box {margin-bottom: 15vh;}
+            #menu_box td .menu_txt {height: 7vh;}
+            #menu_box td .menu_txt div {right: 2vw;}
+            #menu_box td .menu_txt strong {font-size: 1.7vh;}
+            #menu_box td .menu_txt p {font-size: 1.5vh; right: 2vw;}
+        }
+        
+/*        @media screen and (min-width:480px) and (max-width:639px) {}*/
+        
+        @media screen and (max-width:639px) {
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #sub_dessert {display: block; position: absolute; right: 55px; top: 22px;}
+            #menu_title h1 {font-size: 22px;}
+            #menu_title div {width: 27px;}
+            #menu_box td {display: block; width: 100%;}
+            #menu_box td .menu_img .menu_pc {display: none;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; cursor: pointer;}
+            #menu_box td .menu_txt div {right: 2vw;}
+            #menu_box td .menu_txt p {right: 2vw;}
+            .hover_wrap_menu {font-size: 2.5vw;}
+            .hover_wrap_menu .hover_data_menu {padding: 5vw;}
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div id="m_header"></div>
+    <div id="menu">
+        <div id="menu_title">
+            <h1>DESSERT</h1>
+            <div><img src="sub_MENU_img/icon/icon_dessert.png" alt="dessert icon"></div>
+        </div>
+        <table id="menu_box">
+            <tr>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/8.dessert/affogato.png" alt="Affogato" class="menu_pc">
+                        <img src="sub_MENU_img/8.dessert/m_affogato.png" alt="Affogato" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">진한 에스프레소를 바닐라 아이스크림 얹어서 진한 커피향과 달콤함을 함께 즐기는 커피 디저트</div>
+                            </div>
+                        </div>
+                        <div class="menu_txt">
+                            <strong>Affogato</strong>
+                            <p>7,500</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/8.dessert/banana%20crepe%20pouch.png"  alt="Banana Crepe Pouch" class="menu_pc">
+                        <img src="sub_MENU_img/8.dessert/m_banana%20crepe%20pouch.png" alt="Banana Crepe Pouch" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">부드럽고 달콤한 크레이프에 시나몬 버터로 볶아낸 바나나와 아이스크림을 건자두와 함께 즐기는 바나나 크레이프 파우치</div>
+                            </div>
+                        </div>
+                        <div class="menu_txt">
+                            <strong>Banana Crepe Pouch</strong>
+                            <p>9,800</p>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/8.dessert/carrot%20cake.png"  alt="Carrot Cake" class="menu_pc">
+                        <img src="sub_MENU_img/8.dessert/m_carrot%20cake.png" alt="Carrot Cake" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">부드러운 캐럿 케이크와 상큼한 크림치즈가 어우러진 매드포갈릭만의 프리미엄 캐럿 케이크</div>
+                            </div>
+                        </div>
+                        <div class="menu_txt">
+                            <strong>Carrot Cake</strong>
+                            <p>9,500</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/8.dessert/garlic%20&%20orange%20ice%20cream.png"  alt="Garlic & Orange Ice Cream" class="menu_pc">
+                        <img src="sub_MENU_img/8.dessert/m_garlic%20&%20orange%20ice%20cream.png" alt="Garlic & Orange Ice Cream" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">갈릭 젤리와 상큼한 갈릭 오렌지 소스를 아이스크림과 즐기는 매드포갈릭 특제 아이스크림</div>
+                            </div>
+                        </div>
+                        <div class="menu_txt">
+                            <strong>Garlic & Orange Ice Cream</strong>
+                            <p>7,500</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu_img">
+                        <img src="sub_MENU_img/8.dessert/mille%20crepe.png"  alt="Mille Crepe" class="menu_pc">
+                        <img src="sub_MENU_img/8.dessert/m_mille%20crepe.png" alt="Mille Crepe" class="menu_m">
+                        <div class="hover_wrap_menu">
+                            <div class="hover_data_menu">
+                                <div class="hover_txt_menu">부드러운 생크림과 겹겹이 쌓은 달콤한 크레이프를 라즈베리와 함께 즐기는 밀 크레이프</div>
+                            </div>
+                        </div>
+                        <div class="menu_txt">
+                            <strong>Mille Crepe</strong>
+                            <p>9500</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer></footer>
+</body>
+</html>
