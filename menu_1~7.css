@@ -6,8 +6,8 @@
         #menu_title div img {width: 100%;}
 
         #menu_box {width: 100%; margin-bottom: 200px;}
-        #menu_box td:nth-child(1) {width: 50%; padding-right: 25px; padding-bottom: 50px; position: relative;}
-        #menu_box td:nth-child(2) {width: 50%; padding-left: 25px; padding-bottom: 50px; position: relative;}
+        #menu_box td:nth-child(1) {padding-right: 25px; padding-bottom: 50px; position: relative;}
+        #menu_box td:nth-child(2) {padding-left: 25px; padding-bottom: 50px; position: relative;}
         #menu_box td .menu_img .menu_pc {vertical-align: bottom; display: block; margin: 0 auto; width: 100%;}
         #menu_box td .menu_img .menu_m {display: none;}
 
@@ -21,8 +21,8 @@
         .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 50px / 2); height: calc(100% - 100px / 2); display: table;}
         .hover_wrap_2n_menu {position: absolute; top: 0; left: 25px;}
 
-        .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 2vw; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.3;}
-        .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 3vh; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
+        .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.3; font-size: 16px;}
+        .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 25px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 16px;}
         
 
 
@@ -43,15 +43,19 @@
             
             .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 20px); height: 220px; display: table;}
             .hover_wrap_2n_menu {position: absolute; top: 0; left: 20px;}
+            
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.3; font-size: 14px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 20px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 14px;}
         }
 
-        @media screen and (min-width:640px) and (max-width:1023px) {
+        @media screen and (min-width:780px) and (max-width:1023px) {
             #menu {width: 90%; margin: 0 auto;}
             #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
             #menu_title div {padding-top: 1vh; padding-bottom: 3vh; width: 30px; margin: 0 auto;}
             #menu_box {width: 100%; margin-bottom: 150px;}
-            #menu_box td:nth-child(1) {width: 50%; padding-right: 20px; padding-bottom: 40px; position: relative;}
-            #menu_box td:nth-child(2) {width: 50%; padding-left: 20px; padding-bottom: 40px; position: relative;}
+            #menu_box td:nth-child(1) {padding-right: 20px; padding-bottom: 40px; position: relative;}
+            #menu_box td:nth-child(2) {padding-left: 20px; padding-bottom: 40px; position: relative;}
+            #menu_box td .menu_img .menu_pc {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 120px;}
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 16px; position: relative; left: 0; top: 0;}
@@ -60,18 +64,42 @@
             #menu_box td .menu_txt div img {width: 100%;}
             #menu_box td .menu_txt p {font-size: 14px; position: absolute; right: 12px; bottom: 12px; display: inline-block;}
             
-            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 40px / 2); height: calc(100% - 80px / 2); display: table;}
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 20px); height: 190px; display: table;}
             .hover_wrap_2n_menu {position: absolute; top: 0; left: 20px;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.4; font-size: 13px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 15px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 13px;}
         }
+        @media screen and (min-width:640px) and (max-width:779px) {
+            #menu {width: 90%; margin: 0 auto;}
+            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
+            #menu_title div {padding-top: 1vh; padding-bottom: 3vh; width: 30px; margin: 0 auto;}
+            #menu_box {width: 100%; margin-bottom: 150px;}
+            #menu_box td:nth-child(1) {padding-right: 20px; padding-bottom: 40px; position: relative;}
+            #menu_box td:nth-child(2) {padding-left: 20px; padding-bottom: 40px; position: relative;}
+            #menu_box td .menu_img .menu_pc {display: none;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 180px;}
+            
+            #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
+            #menu_box td .menu_txt strong {font-size: 16px; position: relative; left: 0; top: 0;}
+            #menu_box td .menu_txt div:nth-child(3) {position: absolute; right: 30px; top: 12px; width: 11px;}
+            #menu_box td .menu_txt div:nth-child(2) {position: absolute; right: 12px; top: 12px; width: 11px;}
+            #menu_box td .menu_txt div img {width: 100%;}
+            #menu_box td .menu_txt p {font-size: 14px; position: absolute; right: 12px; bottom: 12px; display: inline-block;}
+            
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 20px); height: 250px; display: table;}
+            .hover_wrap_2n_menu {position: absolute; top: 0; left: 20px;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.4; font-size: 13px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 15px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 13px;}
+}
 
-        @media screen and (max-width:639px) {
+        @media screen and (min-width:480px) and (max-width:639px) {
             #menu_title h1 {font-size: 22px;}
             #menu_title div {width: 27px;}
             #menu_box {width: 100%; margin-bottom: 150px;}
-            #menu_box td:nth-child(1) {width: 100%; padding-right: 0px; padding-bottom: 50px; position: relative; display:block;}
-            #menu_box td:nth-child(2) {width: 100%; padding-left: 0px; padding-bottom: 50px; position: relative; display:block;}
+            #menu_box td:nth-child(1) {padding-right: 0px; padding-bottom: 50px; position: relative; display:block;}
+            #menu_box td:nth-child(2) {padding-left: 0px; padding-bottom: 50px; position: relative; display:block;}
             #menu_box td .menu_img .menu_pc {display: none;}
-            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; cursor: pointer;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 250px;}
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 16px; position: relative; left: 0; top: 0;}
@@ -80,6 +108,30 @@
             #menu_box td .menu_txt div img {width: 100%;}
             #menu_box td .menu_txt p {font-size: 14px; position: absolute; right: 12px; bottom: 12px; display: inline-block;}
             
-            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width:100%; height: calc(100% - 100px / 2); display: table;}
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width:100%; height: 320px; display: table;}
             .hover_wrap_2n_menu {position: absolute; top: 0; left: 0px;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.5; font-size: 12px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 15px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 12px;}
         }
+
+        @media screen and (max-width:479px) {
+            #menu_title h1 {font-size: 22px;}
+            #menu_title div {width: 27px;}
+            #menu_box {width: 100%; margin-bottom: 150px;}
+            #menu_box td:nth-child(1) {padding-right: 0px; padding-bottom: 50px; position: relative; display:block;}
+            #menu_box td:nth-child(2) {padding-left: 0px; padding-bottom: 50px; position: relative; display:block;}
+            #menu_box td .menu_img .menu_pc {display: none;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 180px;}
+            
+            #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
+            #menu_box td .menu_txt strong {font-size: 16px; position: relative; left: 0; top: 0;}
+            #menu_box td .menu_txt div:nth-child(3) {position: absolute; right: 30px; top: 12px; width: 11px;}
+            #menu_box td .menu_txt div:nth-child(2) {position: absolute; right: 12px; top: 12px; width: 11px;}
+            #menu_box td .menu_txt div img {width: 100%;}
+            #menu_box td .menu_txt p {font-size: 14px; position: absolute; right: 12px; bottom: 12px; display: inline-block;}
+            
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width:100%; height: 250px; display: table;}
+            .hover_wrap_2n_menu {position: absolute; top: 0; left: 0px;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.5; font-size: 11px;}
+            .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 13px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold; font-size: 11px;}
+}
