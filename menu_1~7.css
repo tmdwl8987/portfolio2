@@ -41,7 +41,7 @@
             #menu_box td .menu_txt div img {width: 100%;}
             #menu_box td .menu_txt p {font-size: 15px; position: absolute; right: 15px; bottom: 15px; display: inline-block;}
             
-            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: calc(100% - 40px / 2); height: calc(15vh + 80px); display: table;}
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; z-index: 10; width: 100%; height: calc(15vh + 80px); display: table;}
             .hover_wrap_2n_menu {position: absolute; top: 0; left: 20px;}
         }
 
