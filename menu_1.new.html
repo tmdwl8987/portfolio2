@@ -25,20 +25,12 @@
             sub.hide();
             
 
-            menu_img.mouseenter(function(){
-                $(this).find(".hover_wrap_menu").stop().show();
-            });
-            menu_img.mouseleave(function(){
-                $(this).find(".hover_wrap_menu").stop().hide();
-            });
-            menu_img.click(function(){
-                $(this).find(".hover_wrap_menu").toggle();
-            });
-            menu_img.on('touchstart mouseenter focus', function(e){
-                if(e.type == 'touchstart') {
+            menu_img.on("mouseover",function(e){
                     $(this).find(".hover_wrap_menu").stop().show();
-                }
-            })
+            });
+            menu_img.on("mouseleave", function(e){
+                    $(this).find(".hover_wrap_menu").stop().hide();
+            });
         });
     </script>
     <style>
