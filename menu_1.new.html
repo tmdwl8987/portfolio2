@@ -23,15 +23,65 @@
             var menu_img = $("#menu_box tr td .menu_img");
             var sub = $("#menu_box tr td .hover_wrap_menu");
             sub.hide();
-            
 
-            menu_img.on("mouseover",function(e){
+            width_size = $(window).width();        
+            
+            if (width_size >= 780){
+                if (width_size < 780) {
+                    return;
+                }
+                menu_img.on("mouseenter",function(e){
+                    if (width_size < 780){
+                            return;
+                    }
                     $(this).find(".hover_wrap_menu").stop().show();
-            });
-            menu_img.on("mouseleave", function(e){
+                });
+                menu_img.on("mouseleave", function(e){
+                    if (width_size < 780){
+                            return;
+                    }
                     $(this).find(".hover_wrap_menu").stop().hide();
-            });
-        });
+                });    
+            }  else if (width_size < 780){
+                menu_img.on("click", function(e){                    
+                    if (width_size >= 780){
+                        return;
+                    }
+                    $(this).find(".hover_wrap_menu").stop().toggle();
+                    return;
+                });
+            } else {
+                return;
+            }
+            
+            $( window ).resize( function() {
+                width_size = $(window).width();
+                if (width_size >= 780){
+                    menu_img.on("mouseenter",function(e){
+                        if (width_size < 780){
+                            return;
+                        }
+                        $(this).find(".hover_wrap_menu").stop().show();
+                    });
+                    menu_img.on("mouseleave", function(e){
+                        if (width_size < 780){
+                            return;
+                        }
+                        $(this).find(".hover_wrap_menu").stop().hide();
+                    });
+                } else if (width_size < 780){
+                    menu_img.on("click", function(e){
+                        e.stopPropagation();
+                        if (width_size >= 780){
+                            return;
+                        }
+                        $(this).find(".hover_wrap_menu").stop().toggle();
+                    });
+                } else {
+                    return;
+                }
+            });   
+    });
     </script>
     <style>
     #m_header_box div:nth-child(1) a img {display: none;}
