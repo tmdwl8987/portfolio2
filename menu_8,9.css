@@ -78,7 +78,7 @@
             #menu_box {width: 100%; margin-bottom: 150px;}
             #menu_box td {position: relative; padding: 20px 0px; display: block;}
             #menu_box td .menu_img .menu_pc {display: none;}
-            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 280px;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%;}
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 15px; position: relative; left: 0; top: 0;}
@@ -99,7 +99,7 @@
             #menu_box {width: 100%; margin-bottom: 150px;}
             #menu_box td {position: relative; padding: 20px 0px; display: block;}
             #menu_box td .menu_img .menu_pc {display: none;}
-            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 280px;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%;}
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 15px; position: relative; left: 0; top: 0;}
@@ -120,7 +120,7 @@
             #menu_box {width: 100%; margin-bottom: 150px;}
             #menu_box td {position: relative; padding: 20px 0px; display: block;}
             #menu_box td .menu_img .menu_pc {display: none;}
-            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%; height: 200px;}
+            #menu_box td .menu_img .menu_m {vertical-align: bottom; display: block; margin: 0 auto; width: 100%;}
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 70px; padding: 12px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 15px; position: relative; left: 0; top: 0;}
@@ -129,8 +129,8 @@
             #menu_box td .menu_txt div img {width: 100%;}
             #menu_box td .menu_txt p {font-size: 14px; position: absolute; right: 12px; bottom: 12px; display: inline-block;}
             
-            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 20px; left: 0; z-index: 10; width:100%; height: 270px; display: table;}
+            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 20px; left: 0; z-index: 10; width:100%; height: calc(100% - 40px); cursor: pointer;}
             .hover_wrap_2n_menu {position: absolute; top: 0; left: 0px;}
-            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.5; font-size: 12px;}
+            .hover_wrap_menu .hover_data_menu {color: #e1e3e4; text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; padding: 20px; line-height: 1.5; font-size: 12px;}
             .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 15px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
         }
