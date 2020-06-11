@@ -18,71 +18,38 @@
             $("footer").load("footer.html");
         });
     </script>
+    
     <script>
-        $(document).ready(function(){
+        $(function(){
             var menu_img = $("#menu_box tr td .menu_img");
-            var sub = $("#menu_box tr td .hover_wrap_menu");
+            var sub = $("#menu_box tr td .menu_img .hover_wrap_menu");
+            var cur = 10;
+            var isOn = 0;
+            
             sub.hide();
-
-            width_size = $(window).width();        
             
-            if (width_size >= 780){
-                if (width_size < 780) {
-                    return;
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
                 }
-                menu_img.on("mouseenter",function(e){
-                    if (width_size < 780){
-                            return;
-                    }
-                    $(this).find(".hover_wrap_menu").stop().show();
-                });
-                menu_img.on("mouseleave", function(e){
-                    if (width_size < 780){
-                            return;
-                    }
-                    $(this).find(".hover_wrap_menu").stop().hide();
-                });    
-            }  else if (width_size < 780){
-                menu_img.on("click", function(e){                    
-                    if (width_size >= 780){
-                        return;
-                    }
-                    $(this).find(".hover_wrap_menu").stop().toggle();
-                    return;
-                });
-            } else {
-                return;
-            }
-            
-            $( window ).resize( function() {
-                width_size = $(window).width();
-                if (width_size >= 780){
-                    menu_img.on("mouseenter",function(e){
-                        if (width_size < 780){
-                            return;
-                        }
-                        $(this).find(".hover_wrap_menu").stop().show();
-                    });
-                    menu_img.on("mouseleave", function(e){
-                        if (width_size < 780){
-                            return;
-                        }
-                        $(this).find(".hover_wrap_menu").stop().hide();
-                    });
-                } else if (width_size < 780){
-                    menu_img.on("click", function(e){
-                        e.stopPropagation();
-                        if (width_size >= 780){
-                            return;
-                        }
-                        $(this).find(".hover_wrap_menu").stop().toggle();
-                    });
-                } else {
-                    return;
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap_menu").slideDown();
+                    isOn = 2;
+                    console.log("down")
                 }
-            });   
+                else {
+                    $(this).find(".hover_wrap_menu").slideUp();
+                    isOn = 1;
+                    console.log("up")
+                }
+                cur = i;
+            });
     });
     </script>
+    
     <style>
     #m_header_box div:nth-child(1) a img {display: none;}
     #m_header_box div:nth-child(2) a img {display: block;}
@@ -107,7 +74,7 @@
                         <div class="hover_wrap_menu">
                             <div class="hover_data_menu">
                                 <div class="hover_txt_menu">뼈 그대로 구워 육즙 가득하고 쫄깃한 서대살 스테이크를 달콤한 구운 망고, 크리스피 포테이토, 허니 갈릭 사워 크림과 함께 즐기는 갈릭 & 망고 서대 스테이크</div>
-                                <div class="hover_origin_menu">쇠고기(부채살 250g): 국내산 육우</div>
+                                <p class="hover_origin_menu">쇠고기(부채살 250g): 국내산 육우</p>
                             </div>
                         </div>
                     </div>

@@ -18,19 +18,38 @@
             $("footer").load("footer.html");
         });
     </script>
+    
     <script>
-        $(document).ready(function(){
+        $(function(){
             var menu_img = $("#menu_box tr td .menu_img");
-            var sub = $("#menu_box tr td .hover_wrap_menu");
+            var sub = $("#menu_box tr td .menu_img .hover_wrap_menu");
+            var cur = 10;
+            var isOn = 0;
+            
             sub.hide();
-            menu_img.mouseenter(function(){
-                $(this).find(".hover_wrap_menu").stop().show();
+            
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
+                }
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap_menu").slideDown();
+                    isOn = 2;
+                    console.log("down")
+                }
+                else {
+                    $(this).find(".hover_wrap_menu").slideUp();
+                    isOn = 1;
+                    console.log("up")
+                }
+                cur = i;
             });
-            menu_img.mouseleave(function(){
-                $(this).find(".hover_wrap_menu").stop().hide();
-            });
-        });
+    });
     </script>
+    
     <style>
             #m_header_box div:nth-child(1) a img {display: none;}
             #m_header_box div:nth-child(2) a img {display: block;}

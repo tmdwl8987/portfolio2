@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="menu_10.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
     
     <script src="Basic/js/jquery-3.4.1.min.js"></script>
@@ -18,17 +19,34 @@
         });
     </script>
     <script>
-        $(document).ready(function(){
+        $(function(){
             var menu_img = $(".wine tr td .menu_img");
-            var sub = $(".wine tr td .hover_wrap_menu");
+            var sub = $(".wine tr td .menu_img .hover_wrap_menu");
+            var cur = 10;
+            var isOn = 0;
+            
             sub.hide();
-            menu_img.mouseenter(function(){
-                $(this).find(".hover_wrap_menu").stop().show();
+            
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
+                }
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap_menu").slideDown();
+                    isOn = 2;
+                    console.log("down")
+                }
+                else {
+                    $(this).find(".hover_wrap_menu").slideUp();
+                    isOn = 1;
+                    console.log("up")
+                }
+                cur = i;
             });
-            menu_img.mouseleave(function(){
-                $(this).find(".hover_wrap_menu").stop().hide();
-            });
-        });
+    });
     </script>
     
     <script>
@@ -46,80 +64,8 @@
             });
         });
     </script>
-     
-    <style>
-        body {background: #e1e3e4; width: 100%; height: 100%;}
-        #menu {width: 80%; margin: 0 auto;}
-        #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px}
-        #menu_title div {padding-top: 1vh; width: 40px; margin: 0 auto;}
-        #menu_title div img {width: 100%;}
-        #menu_title ul {display: table; overflow: hidden; width: 90%; margin: 0 auto; text-align: center; padding-top: 90px; padding-bottom: 60px;}
-        #menu_title ul li {display: table-cell; vertical-align: middle; width: 20%; padding: 5px 10px; border-right: 1px solid #a6a6a6; background: #e1e3e4;}
-        #menu_title ul li a {font-weight: bold; font-size: 18px; color: #757575}
-        #menu_title ul li:last-child {border-right: 0;}
-        #menu_title ul li a.selected {color: #f03a40;}
-        
-        .wine {width: 100%; margin-bottom: 20vh;}
-        .wine td {padding: 1vh 0.5vw; position: relative;}
-        .wine td .menu_img {background: #757575; vertical-align: bottom; display: block; margin: 0 auto; width: 100%; cursor: pointer;}
-        .wine td .menu_txt { color: #e1e3e4; overflow: hidden; padding: 0 15px 10px 15px; width: 100%; height: 50px;}
-        .wine td .menu_txt strong {font-size: 16px; display: inline-block; width: 85%;}
-        .wine td .menu_txt p {font-size: 13px; float: right; vertical-align: text-bottom; padding-top: 5px; width: 15%; display: inline-block; text-align: right;}
-
-        .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 1vh; left: 0.5vw; z-index: 10; width: calc(100% - (2vw / 2)); height: calc(100% - (4vh / 2)); display: table; padding: 2vw; font-size: 16px;}
-        .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 2vw; text-align: center; display: table-cell; vertical-align: middle; line-height: 1.3;}
-        .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 3vh; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
-        
-        
-        
-        @media screen and (min-width:1280px) and (max-width:1599px) {
-            .hover_wrap_menu {font-size: 14px;}
-        }
-        
-        @media screen and (min-width:1024px) and (max-width:1279px) {
-            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 28px;}
-            #menu_title div {padding-top: 1vh; width: 34px; margin: 0 auto;}
-            .wine {margin-bottom: 15vh;}
-            #menu_title ul li a {font-weight: bold; font-size: 15px;}
-            .wine td .menu_txt strong {font-size: 15px;}
-            .wine td .menu_txt p {font-size: 12px;}
-            .hover_wrap_menu {font-size: 12px;}
-        }
-        
-        @media screen and (min-width:640px) and (max-width:1023px) {
-            #menu {width: 90%; margin: 0 auto;}
-            #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
-            #menu_title div {padding-top: 1vh; width: 30px; margin: 0 auto;}
-            .wine {margin-bottom: 15vh;}
-            #menu_title ul li a {font-size: 13px;}
-            .wine td .menu_txt strong {font-size: 14px;}
-            .wine td .menu_txt p {font-size: 11px;}
-            .hover_wrap_menu {font-size: 12px;}
-        }
-        
-/*        @media screen and (min-width:480px) and (max-width:639px) {}*/
-        
-        @media screen and (max-width:639px) {
-            #m_header_box div:nth-child(1) a img {display: none;}
-            #m_header_box div:nth-child(2) a img {display: block;}
-            #m_header_box ul #sub_wine {display: block; position: absolute; right: 55px; top: 22px;}
-            #menu_title h1 {font-size: 22px;}
-            #menu_title div {width: 27px;}
-            #menu_title ul {display: block; overflow: hidden; width: 80%; margin: 0 auto; text-align: center; padding-top: 50px; padding-bottom: 30px;}
-            #menu_title ul li {display: block; vertical-align: middle; width: 100%; padding: 10px 0px; border-right: 0; border-top: 1px solid #a6a6a6;}
-            #menu_title ul li:last-child {border-bottom: 1px solid #a6a6a6;}
-            #menu_title ul li a {font-size: 15px; color: #757575;}
-            
-            .wine td {display: block; width: 100%; padding: 2vh 0vw;}
-            .wine td .menu_txt strong {font-size: 14px;}
-            .wine td .menu_txt p {font-size: 11px}
-            
-            .hover_wrap_menu {background: rgba(0,0,0,0.8); position: absolute; top: 2vh; left: 0; z-index: 10; width: 100%; height: calc(100% - (8vh / 2)); display: table; padding: 2vw; font-size: 12px;}
-            .hover_wrap_menu .hover_data_menu {padding: 5vw;} 
-        }
-        
-    </style>
 </head>
+
 <body>
     <header></header>
     <div id="m_header"></div>
