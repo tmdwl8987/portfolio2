@@ -23,12 +23,22 @@
             var menu_img = $("#menu_box tr td .menu_img");
             var sub = $("#menu_box tr td .hover_wrap_menu");
             sub.hide();
+            
+
             menu_img.mouseenter(function(){
                 $(this).find(".hover_wrap_menu").stop().show();
             });
             menu_img.mouseleave(function(){
                 $(this).find(".hover_wrap_menu").stop().hide();
             });
+            menu_img.click(function(){
+                $(this).find(".hover_wrap_menu").toggle();
+            });
+            menu_img.on('touchstart mouseenter focus', function(e){
+                if(e.type == 'touchstart') {
+                    $(this).find(".hover_wrap_menu").stop().show();
+                }
+            })
         });
     </script>
     <style>
