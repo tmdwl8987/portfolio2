@@ -1,20 +1,19 @@
 #right_nav li:nth-child(2) {color: #a6a6a6;}
 input {-webkit-appearance: none; -webkit-border-radius: 0;}
 textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
-select { -webkit-appearance: none; -webkit-border-radius: 0;}
 #join_wrap {width: 70%; margin: 0 auto;}
-#join_wrap h1 {text-align: center; border-bottom: 1px solid #e1e3e4; padding-top: 80px; padding-bottom: 20px; font-size: 32px;}
+#join_wrap h1 {text-align: center; border-bottom: 2px solid #e1e3e4; padding-top: 80px; padding-bottom: 20px; font-size: 32px;}
 .join_container {overflow: hidden;}
 .join_container h2 {width: 20%; display: inline-block; padding-top: 90px; font-size: 24px; text-align: center;}
 .join_box {width: 80%; float: right;}
-.join_box textarea {display: block; background: #eeeeee; border: none; width: 95%; padding: 10px; margin: 5px 0px 20px 10px; overflow-y: scroll; overflow-x: hidden;}
+.join_box textarea {display: block; background: #eeeeee; border: none; width: 95%; padding: 10px; margin: 5px 0px 30px 10px; overflow-y: scroll; overflow-x: hidden;}
 .join_box input {display: inline-block; border: 1px solid #c1c1c1;}
 .join_box input:focus {outline: 1px solid #212121;}
 .join_box {border-top: 2px solid #757575; padding-top: 10px; margin-top: 80px;}
 
 
 .join_box1 div:nth-child(1) {padding: 5px 0px;}
-.join_box1 div:nth-child(2) {border-top: 2px solid #e1e3e4; padding-top: 10px;}
+.join_box1 div:nth-child(2) {border-top: 1px solid #e1e3e4; padding-top: 10px;}
 .join_box1 input[class="chk"] {display: none;}
 .join_box1 input[class="chk"] +label span {display: inline-block; width: 13px; height: 13px; margin: -2px 5px 0 5px; vertical-align: middle; border: 1px solid #a6a6a6; cursor: pointer; background: #ffffff;}
 .join_box1 input[class="chk"]:checked +label span {background: url(sub_other_img/check.png) no-repeat; background-size: 100%; border: 0;}

@@ -34,7 +34,7 @@ option {padding: 0px 15px;}
 .rv_container5 input[type="button"] {border: 0; width: 25%; padding: 10px 0px; font-size: 18px;}
 .rv_container5 input[name="finish"] {background: #a3171b; color: #fff; margin-left: 10px; cursor: pointer;}
 .rv_container5 input[name="finish"]:focus {outline: none;}
-.rv_container5 input[name="cancel"] {cursor: pointer;}
+.rv_container5 input[name="cancel"] {background: #eeeeee; cursor: pointer;}
 .rv_container5 input[name="cancel"]:focus {outline: none;}
 .bb {width: 54px; height: 54px; display: table-cell; vertical-align: middle; background: #a3171b; color: #fff;}
 
