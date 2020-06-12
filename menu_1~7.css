@@ -42,8 +42,8 @@
             
             #menu_box td .menu_txt {background: #fff; width: 100%; margin: 0 auto; height: 60px; padding: 10px 15px; position: relative;}
             #menu_box td .menu_txt strong {font-size: 13px; position: relative; left: 0; top: 0;}
-            #menu_box td .menu_txt div:nth-child(3) {position: absolute; right: 30px; top: 10px; width: 12px;}
-            #menu_box td .menu_txt div:nth-child(2) {position: absolute; right: 15px; top: 10px; width: 12px;}
+            #menu_box td .menu_txt div:nth-child(3) {position: absolute; right: 30px; top: 10px; width: 10px;}
+            #menu_box td .menu_txt div:nth-child(2) {position: absolute; right: 15px; top: 10px; width: 10px;}
             #menu_box td .menu_txt div img {width: 100%;}
             #menu_box td .menu_txt p {font-size: 13px; position: absolute; right: 15px; bottom: 10px; display: inline-block;}
             

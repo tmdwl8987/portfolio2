@@ -174,13 +174,13 @@ footer {width: 100%; background: #212121;}
 @media screen and (min-width:1280px) and (max-width:1599px) {
 #header_box {width: 80%; height: 160px;}
 nav {height: 70px; line-height: 70px; top: 20px; font-size: 15px;}
-#left_nav li {padding: 0px 12px;}
+#left_nav li {padding: 0px 10px;}
 #left_nav li:nth-child(1) {margin-left: 15px;}
 #left_nav li:nth-child(2n) .sub_nav {height: 70px; line-height: 70px; top: 70px;}
 #left_nav li:nth-child(2) ul li:nth-child(1) {padding-left: 110px;}
 #left_nav li:nth-child(4) ul li:nth-child(1) {padding-left: 290px;}
 nav div #main_logo {left: calc(50% - (200px / 2)); ; top: 20px; width: 200px;}
-#right_nav li {padding: 0px 12px;}
+#right_nav li {padding: 0px 10px;}
 #right_nav li:nth-child(4) {margin-right: 15px; line-height: 20px; padding: 5px 10px; left: 0; top: 20px;}
 #header_text {width: 800px; margin-top: 45px; font-size: 17px;}
 
@@ -209,13 +209,13 @@ nav div #main_logo {left: calc(50% - (200px / 2)); ; top: 20px; width: 200px;}
 @media screen and (min-width:1024px) and (max-width:1279px) {
 #header_box {width: 80%; height: 150px;}
 nav {height: 65px; line-height: 65px; top: 20px; font-size: 13px;}
-#left_nav li {padding: 0px 8px;}
+#left_nav li {padding: 0px 7px;}
 #left_nav li:nth-child(1) {margin-left: 8px;}
 #left_nav li:nth-child(2n) .sub_nav {height: 65px; line-height: 65px; top: 65px;}
 #left_nav li:nth-child(2) ul li:nth-child(1) {padding-left: 90px;}
 #left_nav li:nth-child(4) ul li:nth-child(1) {padding-left: 240px;}
 nav div #main_logo {left: calc(50% - (150px / 2)); top: 20px; width: 150px;}
-#right_nav li {padding: 0px 8px;}
+#right_nav li {padding: 0px 7px;}
 #right_nav li:nth-child(4) {margin-right: 8px; line-height: 20px; padding: 5px 10px; left: 0; top: 17px;}
 #header_text {width: 740px; margin-top: 45px; font-size: 15px;}
     
@@ -251,15 +251,15 @@ nav div #main_logo {left: calc(50% - (150px / 2)); top: 20px; width: 150px;}
 /*---------------------------------------------------------------------------*/
 @media screen and (min-width:768px) and (max-width:1023px) {
 #header_box {width: 90%; height: 140px;}
-nav {height: 60px; line-height: 60px; top: 20px; font-size: 11px;}
+nav {height: 60px; line-height: 60px; top: 20px; font-size: 12px;}
 #left_nav li {padding: 0px 4px;}
-#left_nav li:nth-child(1) {margin-left: 0px;}
+#left_nav li:nth-child(1) {margin-left: 4px;}
 #left_nav li:nth-child(2n) .sub_nav {height: 60px; line-height: 60px; top: 60px;}
 #left_nav li:nth-child(2) ul li:nth-child(1) {padding-left: 70px;}
 #left_nav li:nth-child(4) ul li:nth-child(1) {padding-left: 180px;}
 nav div #main_logo {left: calc(50% - (130px / 2)); top: 20px; width: 130px;}
-#right_nav li {padding: 0px 4px;}
-#right_nav li:nth-child(4) {margin-right: 0px; line-height: 20px; padding: 3px 8px; left: 0; top: 17px;}
+#right_nav li {padding: 0px 5px;}
+#right_nav li:nth-child(4) {margin-right: 4px; line-height: 20px; padding: 3px 8px; left: 0; top: 17px;}
 #header_text {width: 540px; margin-top: 40px; font-size: 13px;}
     
 #brandVisual {width: 90%; height: 45vh;}
