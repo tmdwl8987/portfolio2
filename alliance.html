@@ -46,15 +46,13 @@
         #menu_title ul li h2 {font-size: 23px; border-top: 2px solid; padding-top: 10px; cursor: pointer; color: #757575;}
         #menu_title ul li .selected {color: #f03a40;}
         
-        .alliance_txt {background: #fff; overflow: hidden; margin-bottom: 150px; padding: 10px; width: 100%; display: table;}
-        .alliance_txt div:nth-child(1) {width: 30%; margin: 80px 0px; display: table-cell; vertical-align: middle; padding-left: 10%;}
+        .alliance_txt {background: #fff; overflow: hidden; margin-bottom: 150px; padding: 20px; width: 100%; display: table;}
+        .alliance_txt div:nth-child(1) {width: 24%; display: table-cell; vertical-align: middle; padding-left: 5%;}
         .alliance_txt div:nth-child(1) img {width: 100%;}
         .alliance_txt div:nth-child(2) {display: table-cell; vertical-align: middle; padding: 20px 0px 20px 50px;}
-        .alliance_txt div:nth-child(2) h3 {font-size: 22px; padding-bottom: 10px;}
-        .alliance_txt div:nth-child(2) date {font-size: 14px; padding-bottom: 25px; display: block;}
-        .alliance_txt div:nth-child(2) p {font-size: 16px; padding-bottom: 15px; display: block; line-height: 1.4;}
-        
-        
+        .alliance_txt div:nth-child(2) h3 {font-size: 20px; padding-bottom: 10px;}
+        .alliance_txt div:nth-child(2) date {font-size: 13px; padding-bottom: 25px; display: block;}
+        .alliance_txt div:nth-child(2) p {font-size: 14px; padding-bottom: 15px; display: block; line-height: 1.4;}
         
         
 /*        @media screen and (min-width:1280px) and (max-width:1599px) {}*/
@@ -63,15 +61,44 @@
             #menu_title div {padding-top: 1vh; padding-bottom: 5vh; width: 34px; margin: 0 auto;}
             #menu_title ul li h2 {font-size: 20px;}
             .alliance_txt div:nth-child(1) {width: 25%; padding-left: 0%;}
+            .alliance_txt div:nth-child(2) {display: table-cell; vertical-align: middle; padding: 20px 0px 20px 30px;}
+            .alliance_txt div:nth-child(2) h3 {font-size: 19px; padding-bottom: 5px;}
+            .alliance_txt div:nth-child(2) date {font-size: 12px; padding-bottom: 20px; display: block;}
+            .alliance_txt div:nth-child(2) p {font-size: 13px; padding-bottom: 10px; display: block; line-height: 1.4;}
         }
-        @media screen and (min-width:640px) and (max-width:1023px) {
+        
+        @media screen and (min-width:768px) and (max-width:1023px) {
             #menu {width: 90%; margin: 0 auto;}
             #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 25px;}
             #menu_title div {padding-top: 1vh; padding-bottom: 3vh; width: 30px; margin: 0 auto;}
             #menu_title ul li h2 {font-size: 18px;}
             .alliance_txt div:nth-child(1) {width: 25%; padding-left: 0%;}
+            .alliance_txt div:nth-child(2) {display: table-cell; vertical-align: middle; padding: 20px 0px 20px 30px;}
+            .alliance_txt div:nth-child(2) h3 {font-size: 19px; padding-bottom: 5px;}
+            .alliance_txt div:nth-child(2) date {font-size: 12px; padding-bottom: 20px; display: block;}
+            .alliance_txt div:nth-child(2) p {font-size: 13px; padding-bottom: 10px; display: block; line-height: 1.4;}
         }
-/*        @media screen and (min-width:480px) and (max-width:639px) {}*/
+        
+        @media screen and (min-width:640px) and (max-width:767px) {
+            #menu {width: 100%; margin: 0 auto;}
+            #menu_title h1 {font-size: 22px;}
+            #menu_title div {width: 30px; padding-bottom: 4vh; }
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #sub_alliance {display: block; position: absolute; right: 55px; top: 22px;}
+            #menu_title ul {display: flex; padding: 20px 0px;}
+            #menu_title ul li {flex: 1; text-align: center; padding: 10px;}
+            #menu_title ul li:nth-child(1) {padding-right: 10px;}
+            #menu_title ul li:nth-child(2) {padding-left: 0px;}
+            #menu_title ul li h2 {font-size: 14px; border-top: 1px solid; padding-top: 10px; cursor: pointer; color: #757575;}
+            
+            .alliance_txt div:nth-child(1) {width: 25%; padding-left: 0%;}
+            .alliance_txt div:nth-child(2) {display: table-cell; vertical-align: middle; padding: 10px 0px 10px 30px;}
+            .alliance_txt div:nth-child(2) h3 {font-size: 18px; padding-bottom: 5px;}
+            .alliance_txt div:nth-child(2) date {font-size: 12px; padding-bottom: 20px; display: block;}
+            .alliance_txt div:nth-child(2) p {font-size: 12px; padding-bottom: 10px; display: block; line-height: 1.4;}
+        }
+        
         @media screen and (max-width:639px) {
             #menu {width: 100%; margin: 0 auto;}
             #menu_title h1 {font-size: 22px;}

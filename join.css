@@ -1,3 +1,4 @@
+#right_nav li:nth-child(2) {color: #a6a6a6;}
 #join_wrap {width: 70%; margin: 0 auto;}
 #join_wrap h1 {text-align: center; border-bottom: 2px solid #e1e3e4; padding-top: 80px; padding-bottom: 20px; font-size: 32px;}
 .join_container {overflow: hidden;}
@@ -72,7 +73,9 @@
 .finish_box {text-align: center; margin-top: 80px; margin-bottom: 230px;}
 .finish_box input[type="button"] {border: 0; width: 30%; padding: 10px 0px; font-size: 18px;}
 .finish_box input[name="finish"] {background: #a3171b; color: #fff; margin-left: 10px; cursor: pointer;}
+.finish_box input[name="finish"]:focus {outline: none;}
 .finish_box input[name="cancel"] {cursor: pointer;}
+.finish_box input[name="cancel"]:focus {outline: none;}
 
 
 @media screen and (min-width:1280px) and (max-width:1599px) {

@@ -11,6 +11,7 @@
     
     <script src="Basic/js/jquery-3.4.1.min.js"></script>
     <script src="Basic/js/prefixfree.min.js"></script>
+    
     <script>
         $(document).ready(function(){
             $("header").load("header.html");
@@ -18,6 +19,7 @@
             $("footer").load("footer.html");
         });
     </script>
+    
     <script>
         $(document).ready(function(){
             var num = 0,
@@ -87,6 +89,7 @@
             })
         });
     </script>
+    
     <script>
         $(document).ready(function(){
             var $menu = $("#menu_list ul li");
@@ -163,6 +166,70 @@
             });
             $end.click(function(e){
                 var a = $(".button2 > .page_wrap > .btn > a").length-1;
+                $button.removeClass();
+                $button.eq(a).addClass("active");
+                $layout.removeClass();
+                $layout.eq(a).addClass("list");
+                num=a;
+            })
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+            var num = 0,
+                $button = $(".button3 > .page_wrap > .btn > a"),
+                $layout = $(".table_layout3 > ul"),
+                $left = $(".button3 > .page_wrap > .btnlb"),
+                $right = $(".button3 > .page_wrap > .btnrb"),
+                $first = $(".button3 > .page_wrap > .btnll"),
+                $end = $(".button3> .page_wrap > .btnrr");
+                
+            $button.click(function(){
+                var i = $(this).index();
+                $button.removeClass();
+                $button.eq(i).addClass("active");
+                $layout.removeClass();
+                $layout.eq(i).addClass("list");
+                num = i;
+            });
+            
+            $left.click(function(e){
+                e.preventDefault();
+                num = num-1;
+                if (num < 0) {
+                    num = 0;
+                    return; // 빠져나오기
+                }
+                motion();
+            });
+            
+            $right.click(function(e){
+                e.preventDefault();
+                $listNum = $(".button3 > .page_wrap > .btn > a").length;
+                num = num+1;
+                if (num >= $listNum){
+                    num = $listNum-1;
+                    return;
+                }
+                motion();
+            });
+            function motion(){
+                $button.removeClass();
+                $button.eq(num).addClass("active");
+                $layout.removeClass();
+                $layout.eq(num).addClass("list");
+            }
+            
+            $first.click(function(e){
+                $button.removeClass();
+                $button.eq(0).addClass("active");
+                $layout.removeClass();
+                $layout.eq(0).addClass("list");
+                num=0;
+            });
+            $end.click(function(e){
+                var a = $(".button3 > .page_wrap > .btn > a").length-1;
                 $button.removeClass();
                 $button.eq(a).addClass("active");
                 $layout.removeClass();
@@ -502,7 +569,46 @@
             </div>
 	    </div>
     </div>
-    
+    <div class="section section3">
+       <h2>고객의 소리</h2>
+       	<div class="table_layout table_layout3 show_layout3">
+           	<ul class="list">
+	    		<li class="table_tr">
+	    			<div class="num">3</div>
+	    			<div class="subject">정부 긴급재난지원금 사용 가능 매장 안내</div>
+	    			<div class="id">tmdwl8987</div>
+	    			<div class="date">2020-05-13</div>
+	    		</li>
+	    		<li class="table_tr">
+	    			<div class="num">2</div>
+	    			<div class="subject">임시 매장 영업 안내</div>
+	    			<div class="id">tmdwl8987</div>
+	    			<div class="date">2020-02-26</div>
+	    		</li>
+	    		<li class="table_tr">
+	    			<div class="num">1</div>
+	    			<div class="subject">개인정보 처리방침 개정 안내(2019년 11월 29일부터 적용)</div>
+	    			<div class="id">tmdwl8987</div>
+	    			<div class="date">2020-02-01</div>
+	    		</li>
+	    	</ul>
+	    	<div class="button button3">
+                <div class="page_wrap">
+                    <a href="javascript:;" class="btnll"><img src="sub_other_img/arrow_ll.gif" alt=""></a>
+                    <a href="javascript:;" class="btnlb"><img src="sub_other_img/arrow_lb.gif" alt=""></a>
+                    <span class="btn">
+                        <a href="javascript:;" class="active">1</a>
+                    </span>
+                    <a href="javascript:;" class="btnrb"><img src="sub_other_img/arrow_rb.gif" alt=""></a>
+                    <a href="javascript:;" class="btnrr"><img src="sub_other_img/arrow_rr.gif" alt=""></a>
+                </div>
+            </div>
+            <div class="btn_wrap">
+            <button type="button" class="btn">글쓰기</button>
+            </div>
+	    </div>
+
+    </div>  
 
     </div>
     <footer></footer>

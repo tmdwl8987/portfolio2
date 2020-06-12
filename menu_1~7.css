@@ -24,7 +24,8 @@
 
         .hover_wrap_menu .hover_data_menu {color: #e1e3e4; padding: 0 20px; line-height: 1.5; font-size: 14px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;}
         .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 25px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
-        
+
+
         @media screen and (min-width:1280px) and (max-width:1599px) {
             #menu_box td .menu_txt {height: 70px;}
             #menu_box td .menu_txt strong {font-size: 14px;}

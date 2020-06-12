@@ -1,4 +1,5 @@
 body {background: #ffffff; width: 100%; height: 100%;}
+#right_nav li:nth-child(3) {color: #a6a6a6;}
 #menu {width: 80%; margin: 0 auto;}
 #menu_title {width: 100%; margin: 0 auto;}
 #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px;}
@@ -16,6 +17,8 @@ body {background: #ffffff; width: 100%; height: 100%;}
 .table_layout {display: none;}
 .table_layout.show_layout1 {display: block;}
 .table_layout.show_layout2 {display: block;}
+.table_layout.show_layout3 {display: block;}
+.section3 {margin-bottom: 100px; display: none;}
 .table_layout > ul {display: none;}
 .table_layout > ul.list {display: table; width: 100%; border-top: 1px solid #a6a6a6;}
 .table_layout > ul.list > li {display: table-row; cursor: pointer; line-height: 1.3}
@@ -29,13 +32,22 @@ body {background: #ffffff; width: 100%; height: 100%;}
 .table_layout2 > ul > li .num {width: 10%;}
 .table_layout2 > ul > li .date {width: 20%;}
 
+.table_layout3 > ul > li .num {width: 10%;}
+.table_layout3 > ul > li .subject {width: 60%;}
+.table_layout3 > ul > li .id {width: 15%;}
+.table_layout3 > ul > li .date {width: 15%;}
+
+.table_layout3 {position: relative;}
+
 /*button*/
 .button {overflow: hidden; width: 100%; text-align: center;}
 .button .page_wrap {height: 47px; margin-top: 60px;}
 .button .page_wrap a {padding: 10px 15px; border: 1px solid #e0e0e0; margin: 0 3px; display: inline-block;}
 .button .page_wrap .btn a.active {background: #d0d0d0;}
 
-
+.btn_wrap {position: absolute; right: 0; bottom: 10px;}
+.btn_wrap button { border: 0; border-radius: 0; color: #fff; background: #a3171b; padding: 10px;}
+.btn_wrap button:focus {outline: none;}
 
 /*        @media screen and (min-width:1280px) and (max-width:1599px) {}*/
 @media screen and (min-width:1024px) and (max-width:1279px) {
