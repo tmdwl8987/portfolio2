@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>매드포갈릭 customer_section3_write</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="customer_section3_write.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    
+    <script src="Basic/js/jquery-3.4.1.min.js"></script>
+    <script src="Basic/js/prefixfree.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").load("header.html");
+            $("#m_header").load("m_header.html");
+            $("footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header></header>
+    <div id="m_header"></div>
+    <div id="write_wrap">
+        <form id="write_container" action="#" method="post">
+            <h1>고객의 소리</h1>
+            <fieldset id="write_box">
+                <div>
+                    <label for="title">제목</label>
+                    <input type="text" id="title">
+                </div>
+                <div>
+                    <label for="writer">작성자</label>
+                    <input type="text" id="writer">
+                </div>
+                <div>
+                    <label for="content">내용</label>
+                    <textarea name="" id="content" cols="30" rows="20" style="resize: none"></textarea>
+                </div>
+            </fieldset>
+            <div id="finish_box">
+                <input type="button" value="등록" name="finish">
+                <input type="button" value="취소" name="cancel">
+            </div>
+        </form>
+    </div>
+    <footer></footer>
+</body>
+</html>
