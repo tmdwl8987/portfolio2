@@ -11,33 +11,41 @@
                 $("#m_nav").animate({right:"-80%"},500);
                 $(".m_sub_nav").animate({right:"-50%"});
                 $("#glayLayer").hide();
-                $("html,body").css({"overflow" : "auto", "overflow-x" : "hidden" , "height" : "100%"});
+                $("html,body").css({"overflow" : "auto", "height" : "100%"});
             });
             $("#glayLayer").click(function(){
                 $("#m_nav").animate({right:"-80%"},500);
                 $(".m_sub_nav").animate({right:"-50%"});
                 $("#glayLayer").hide();
-                $("html,body").css({"overflow" : "auto", "overflow-x" : "hidden" , "height" : "100%"});
+                $("html,body").css({"overflow" : "auto", "height" : "100%"});
             });
         });
     </script>
     
    <script>
     $(function(){
-        var i = 0;
-        $("#m_nav_left li").on({
-            click:function(){
-                if(i == 0){
-                $(".m_sub_nav").animate({right:"-50%"});
-                $(this).find(".m_sub_nav").animate({right:"0px"});
-                    i = 1;
-                }else{
-                $(this).find(".m_sub_nav").animate({right:"-50%"});
-                    i = 0;
-                }
+        var cur = 10;
+        var isOn = 0;
+        
+        $("#m_nav_left li").on("click",function(e){
+            if(isOn == 1){
+                cur = 10;
             }
-        })
-    })
+            var i = $("#m_nav_left li").index(this);
+        
+            if(cur != i){
+            $(".m_sub_nav").animate({right:"-50%"});
+            $(this).find(".m_sub_nav").animate({right:"0px"});
+                isOn = 2;
+                console.log("show")
+            } else{
+            $(this).find(".m_sub_nav").animate({right:"-50%"});
+                isOn = 1;
+                console.log("hide")
+            }
+            cur = i;
+        });
+    });
     </script>
 
     <div id="m_header">
