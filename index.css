@@ -462,7 +462,7 @@ header {display: none;}
 #m_header_box ul li {float: left; color: #fff; display: none; font-size: 15px; font-weight: bold; line-height: 8px;}
 #m_header_box div img {width: 24px; position: absolute; right: 15px; top: 16px; cursor: pointer;}
 
-#m_nav {width: 80%; height: 100%; background: #fff; position: absolute; right: -80%; top: 0; z-index: 10;}
+#m_nav {width: 80%; height: 100%; background: #fff; position: absolute; right: -80%; top: 0; z-index: 10; display: none;}
 #m_nav_box1 {width: 100%; height: 50px; line-height: 50px; background: #a3171b; color: #fff; overflow: hidden;}
 #m_nav_box1 div {float: left; font-size: 20px; margin-left: 20px; cursor: pointer;}
 #m_nav_box1 ul {float: right; overflow: hidden; font-size: 14px;}
@@ -474,7 +474,7 @@ header {display: none;}
 #m_nav_left li {height: 50px; line-height: 50px; padding-left: 20px; cursor: pointer;}
 #m_nav_left li span {float: right; padding-right: 20px;}
 #m_nav_left li:nth-child(5) {border-bottom: 1px solid #a6a6a6;}
-#m_nav_left .m_sub_nav {width: 50%; height: 100%; position: absolute; top: 0; right: -50%; background: #a6a6a6; z-index: 20;}
+#m_nav_left .m_sub_nav {width: 50%; height: 100%; background: #a6a6a6; position: absolute; top: 0; right: -50%; z-index: 20; _display: none;}
     
     
 #brandVisual {width: 100%; height: 80vh;}
