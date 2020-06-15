@@ -39,9 +39,9 @@
         .lg_box p input[type="password"]:focus {outline:1px solid #f03a40;}
         
         .lg_box div input[id="chk"] {display: none;}
-        .lg_box div input[id="chk"] +label span {display: inline-block; width: 15px; height: 15px; margin: -2px 5px 0 0; vertical-align: middle; border: 1px solid #a6a6a6; cursor: pointer; background: #ffffff;}
+        .lg_box div input[id="chk"] +label span {display: inline-block; width: 15px; height: 15px; margin-right: 5px; border: 1px solid #a6a6a6; cursor: pointer; background: #ffffff;}
         .lg_box div input[id="chk"]:checked +label span {background: url(sub_other_img/check.png) no-repeat; background-size: 100%; border: 0;}
-        .lg_box div label strong {font-size: 15px;}
+        .lg_box div label strong {font-size: 15px; vertical-align: top;}
         
         .lg_box div ul {overflow: hidden; float: right;}
         .lg_box div ul li {float: left; font-size: 15px;}
@@ -56,32 +56,52 @@
         
         
         @media screen and (min-width:1024px) and (max-width:1279px) {
-            fieldset h1 {text-align: center; padding-top: 20px; padding-bottom: 5vh; font-size: 28px;}
+            fieldset h1 {text-align: center; padding-top: 20px; padding-bottom: 5vh; font-size: 26px;}
+            #lg_wrap {width: 340px; padding: 25px;}
+            .lg_box p input {width: 100%; height: 45px;}
+            .lg_box div input[id="chk"] +label span {width: 14px; height: 14px;}
+            .lg_box div label strong {font-size: 14px;}
+            .lg_box div ul li {font-size: 14px;}
+            .lg_box p input[type="button"] {height: 45px; font-size: 14px;}
+            .lg_box p:nth-child(4) input[type="button"] {margin-top: 60px;}
         }
         @media screen and (min-width:768px) and (max-width:1023px) {
-            fieldset h1 {text-align: center; padding-top: 20px; padding-bottom: 5vh; font-size: 25px;}
-            #lg_wrap {width: 350px; margin-top: 160px; margin-bottom: 260px;}
-            .lg_box p input {width: 100%; height: 40px; font-size: }
-            .lg_box div input[id="chk"] +label span {width: 14px; height: 14px; margin: 0px 5px 0 0; vertical-align: top;}
-            .lg_box div label strong {font-size: 14px; vertical-align: top;}
+            fieldset h1 {text-align: center; padding-top: 20px; padding-bottom: 5vh; font-size: 23px;}
+            #lg_wrap {width: 340px; padding: 25px;}
+            .lg_box p input {width: 100%; height: 45px;}
+            .lg_box div input[id="chk"] +label span {width: 14px; height: 14px;}
+            .lg_box div label strong {font-size: 14px;}
             .lg_box div ul li {font-size: 14px;}
-            .lg_box p:nth-child(4) input[type="button"] {margin-top: 70px; margin-bottom: 10px;height: 50px; font-size: 16px;}
-            .lg_box p:nth-child(5) input[type="button"] {height: 50px; font-size: 16px}    
+            .lg_box p input[type="button"] {height: 45px; font-size: 14px;}
+            .lg_box p:nth-child(4) input[type="button"] {margin-top: 60px;}   
         }
-        @media screen and (max-width:767px) {
+        @media screen and (min-width:480px) and (max-width:767px) {
             #m_header_box div:nth-child(1) a img {display: none;}
             #m_header_box div:nth-child(2) a img {display: block;}
             #m_header_box ul #login {display: block; position: absolute; right: 55px; top: 22px;}
-            fieldset h1 {font-size: 22px;}
-            #lg_wrap {width: 86%; margin-top: 80px; margin-bottom: 200px; padding: 20px;}
-            .lg_box p input {width: 100%; height: 35px; font-size: 12px;}
-            .lg_box div input[id="chk"] +label span {width: 14px; height: 14px; margin: 0px 5px 0 0; vertical-align: top;}
-            .lg_box div label strong {font-size: 12px; vertical-align: top;}
-            .lg_box div ul li {font-size: 12px;}
-            .lg_box div ul li:nth-child(1) {padding-right: 5px;}
-            .lg_box div ul li:nth-child(2) {padding-left: 5px;}
-            .lg_box p:nth-child(4) input[type="button"] {margin-top: 60px; margin-bottom: 10px;height: 40px; font-size: 14px;}
-            .lg_box p:nth-child(5) input[type="button"] {height: 40px; font-size: 14px;} 
+            fieldset h1 {font-size: 20px;}
+            
+            #lg_wrap {width: 300px; padding: 20px;}
+            .lg_box p input {width: 100%; height: 40px;}
+            .lg_box div input[id="chk"] +label span {width: 12px; height: 12px; vertical-align: top;}
+            .lg_box div label strong {font-size: 11px;}
+            .lg_box div ul li {font-size: 11px;}
+            .lg_box p input[type="button"] {height: 40px; font-size: 11px;}
+            .lg_box p:nth-child(4) input[type="button"] {margin-top: 60px;}   
+        }
+        @media screen and (max-width:479px) {
+            #m_header_box div:nth-child(1) a img {display: none;}
+            #m_header_box div:nth-child(2) a img {display: block;}
+            #m_header_box ul #login {display: block; position: absolute; right: 55px; top: 22px;}
+            fieldset h1 {font-size: 20px;}
+            
+            #lg_wrap {width: 280px; padding: 20px;}
+            .lg_box p input {width: 100%; height: 40px;}
+            .lg_box div input[id="chk"] +label span {width: 12px; height: 12px; vertical-align: top;}
+            .lg_box div label strong {font-size: 11px;}
+            .lg_box div ul li {font-size: 11px;}
+            .lg_box p input[type="button"] {height: 40px; font-size: 11px;}
+            .lg_box p:nth-child(4) input[type="button"] {margin-top: 60px;}   
         }
     </style>
 </head>
