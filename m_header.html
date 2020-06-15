@@ -1,4 +1,13 @@
     <script>
+        $(window).resize(function(){
+            var width_size = window.outerWidth;
+            if(width_size<=767) {
+                $("html,body").css({"overflow-x" : "hidden"}); 
+            };
+        });
+    </script>
+       
+       <script>
         $(function(){
             $('body').append("<div id ='glayLayer'></div>");
             
@@ -47,7 +56,7 @@
         });
     });
     </script>
-
+    
     <div id="m_header">
         <div id="m_header_box">
           <div><a href="index.html"><img src="index_img/logo2.png" alt="매드포갈릭"></a></div>
