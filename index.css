@@ -1,4 +1,4 @@
-body {font-family: '나눔스퀘어','나눔스퀘어_ac'; width: 100%;}
+body {font-family: 'NanumSquare','나눔스퀘어','나눔스퀘어_ac'; width: 100%;}
 #wrap {min-height: calc(100vh - 170px);}
 header {width: 100%; background: #212121;}
 #header_box {background: url(index_img/brand.PNG) no-repeat; background-size: cover; width: 80%; height: 180px; margin: 0 auto; position: relative;}
