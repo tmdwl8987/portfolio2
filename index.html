@@ -28,8 +28,6 @@
             var current = 0;
             var setIntervalId
             
-            
-            
             button.on({
                 click:function(){
                     var tg = $(this);
@@ -41,7 +39,6 @@
             });
             
             timer();
-            
             $("#wrap").on({
                 mouseover:function(){
                     clearInterval(setIntervalId);
@@ -58,11 +55,14 @@
                         n = 0;
                     }
                     button.eq(n).trigger('click');
-                }, 3000000);
+                }, 5000);
             }
 
             // 슬라이드 넘기기 왼쪽 -> 오른쪽
             function move(i){
+                button.removeClass('on');
+                button.eq(i).addClass('on');
+                
                 if(current == i) return;
                 
                 var current1 = visual.eq(current);  
@@ -73,7 +73,7 @@
                 
                 current = i; 
             }
-            
+            // 슬라이드 넘기기 오른쪽 -> 왼쪽
             function move_pre(i){
                 button.removeClass('on');
                 button.eq(i).addClass('on');
@@ -94,14 +94,16 @@
                 click:function(){
                     var i = current + 1;
                     if(i >visual.length -1 ) i=0;
-                    button.eq(i).trigger('click');
+//                    button.eq(i).trigger('click');
+                    move(i);
                 }
             });
             $("#slide_prev").on({
                 click:function(){
                     var i = current - 1;
                     if(i < 0) i = visual.length -1;
-                    button.eq(i).trigger('click');
+//                    button.eq(i).trigger('click');
+                    move_pre(i);
                 }
             });
             
@@ -110,12 +112,11 @@
                     if( direction == "left" ) {
                         var i = current + 1;
                         if(i >visual.length -1 ) i=0;
-                        button.eq(i).trigger('click');
+                        move(i);
                     } else if( direction == "right" ) {
                         var i = current - 1;
                         if(i < 0) i = visual.length -1;
-                        button.eq(i).trigger('click');
-                        
+                        move_pre(i);
                         threshold:0
                     }
                 },
