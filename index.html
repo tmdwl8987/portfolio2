@@ -11,6 +11,7 @@
     
     <script src="Basic/js/jquery-3.4.1.min.js"></script>
     <script src="Basic/js/prefixfree.min.js"></script>
+    <script src="Basic/js/jquery.touchSwipe.min.js"></script>
     
     <script>
         $(document).ready(function(){
@@ -26,6 +27,8 @@
             var visual =$('#brandVisual > ul > li');
             var current = 0;
             var setIntervalId
+            
+            
             
             button.on({
                 click:function(){
@@ -101,6 +104,22 @@
                     button.eq(i).trigger('click');
                 }
             });
+            
+            visual.swipe({
+                swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                    if( direction == "left" ) {
+                        var i = current + 1;
+                        if(i >visual.length -1 ) i=0;
+                        button.eq(i).trigger('click');
+                    } else if( direction == "right" ) {
+                        var i = current - 1;
+                        if(i < 0) i = visual.length -1;
+                        button.eq(i).trigger('click');
+                        
+                        threshold:0
+                    }
+                },
+            })
         });
     </script>
     
@@ -131,22 +150,37 @@
                 $banner.css("left", - $bannerWidth);
                 $banner.animate({left:0}, 500);
             });
-        };
+        }; //rollingBanner
     });
     </script>
-    
+     
     <script>
-        $(document).ready(function(){
+        $(function(){
             var menu_img = $("#article5 ul li");
             var sub = $("#article5 ul li .hover_wrap");
+            var cur = 10;
+            var isOn = 0;
+            
             sub.hide();
-            menu_img.mouseenter(function(){
-                $(this).find(".hover_wrap").stop().show();
+            
+            menu_img.on("click", function(e){
+                if (isOn == 1){
+                    cur = 10;
+                }
+                var i = menu_img.index(this);
+                
+                if(cur != i){
+                    sub.hide();
+                    $(this).find(".hover_wrap").fadeIn();
+                    isOn = 2;
+                }
+                else {
+                    $(this).find(".hover_wrap").fadeOut();
+                    isOn = 1;
+                }
+                cur = i;
             });
-            menu_img.mouseleave(function(){
-                $(this).find(".hover_wrap").stop().hide();
-            });
-        });
+    });
     </script>
 </head>
 
@@ -208,68 +242,6 @@
            <h1>MG Menu</h1>
        </div>
        <div id="article2">
-        <!--
-          <div class="swiper-container">
-              <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-1.png" alt="bread">
-                       <p>Bread</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-2.png" alt="starter">
-                       <p>Starter</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-3.png" alt="pasta">
-                       <p>Pasta</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-4.png" alt="pizza">
-                       <p>Pizza</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-5.png" alt="rice & risotto">
-                       <p>Rice & Risotto</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-6.png" alt="steak">
-                       <p>steak</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-7.png" alt="desert">
-                       <p>desert</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-8.png" alt="beverage">
-                       <p>beverage</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <img src="index_img/section2-9.png" alt="wine">
-                       <p>wine</p>
-                  </div>
-              </div>
-              <div class="swiper-button-next"><img src="index_img/section2_next.png" alt=""></div>
-              <div class="swiper-button-prev"><img src="index_img/section2_prev.png" alt=""></div>
-          </div>
-            -->
-          
-        <!--
-          <script src="swiper/js/swiper.min.js"></script>
-          
-          <script>
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    slidesPerGroup: 5,
-                    loop: true,
-                    loopFillGroupWithBlank: true,
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-           </script>
-            -->
            <div id="article2_container">
                <ul>
                    <li><a href="menu_2.bread.html" target="_blank">
@@ -320,7 +292,7 @@
     <div class="section section3">
        <div id="article3_title">
          <div id="article3_title_box">
-            <h1>MEMBERSHIP</h1>
+             <h1><a href="membership.html">MEMBERSHIP</a></h1>
             <p>더매드리워즈 회원에게만 <br> 제공드리는 특별한 혜택</p>
             <span><a href="membership.html" target="_blank">자세히 보기</a></span>
          </div>
@@ -353,7 +325,7 @@
     </div>
     
     <div class="section_name section_name4">
-        <h1>제휴멤버십 & 카드</h1>
+        <h1><a href="alliance.html">제휴멤버십 & 카드</a></h1>
         <p><a href="alliance.html" target="_blank">자세히 보기</a></p>
     </div>
     <div class="section section4">
@@ -379,7 +351,7 @@
     
     <div class="section section5">
        <div class="section_name">
-           <h1>MG Event</h1>
+           <h1><a href="event.html">MG Event</a></h1>
            <p><a href="event.html" target="_blank">MORE</a></p>
        </div>
        <div id="article5">
@@ -393,7 +365,7 @@
                 </li>
                 <li>
                     <img src="sub_EVENT_img/s_event5.jpg" alt="정부 긴급재난지원금 사용처 안내">
-                    <p>정부 긴급재난지원금 사용처 안내</p>
+                    <p>정부 긴급재난지원금 사용처안내</p>
                     <div class="hover_wrap">
                         <div class="hover_data"><a href="event_sub5.html">자세히 보기</a></div>
                     </div>
