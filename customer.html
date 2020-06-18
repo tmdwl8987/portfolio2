@@ -176,6 +176,7 @@
         });
     </script>
     
+<!--
     <script>
         $(document).ready(function(){
             var num = 0,
@@ -200,7 +201,7 @@
                 num = num-1;
                 if (num < 0) {
                     num = 0;
-                    return; // 빠져나오기
+                    return;
                 }
                 motion();
             });
@@ -239,6 +240,19 @@
             })
         });
     </script>
+--><!--고객의 소리-->
+
+    <script>
+        $(document).ready(function(){
+            var cur = 10;
+            var isOn = 0;
+            
+            
+            $(".table_tr").click(function(){
+                
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -258,7 +272,7 @@
 	    		<li class="table_tr">
 	    			<div class="num">20</div>
 	    			<div class="subject">정부 긴급재난지원금 사용 가능 매장 안내</div>
-	    			<div class="date">2020-05-13</div>
+                    <div class="date">2020-05-13</div>
 	    		</li>
 	    		<li class="table_tr">
 	    			<div class="num">19</div>
@@ -576,46 +590,7 @@
                 </div>
             </div>
 	    </div>
-    </div>
-    <div class="section section3">
-       <h2>고객의 소리</h2>
-       	<div class="table_layout table_layout3 show_layout3">
-           	<ul class="list">
-	    		<li class="table_tr">
-	    			<div class="num">3</div>
-	    			<div class="subject">정부 긴급재난지원금 사용 가능 매장 안내</div>
-	    			<div class="id">tmdwl8987</div>
-	    			<div class="date">2020-05-13</div>
-	    		</li>
-	    		<li class="table_tr">
-	    			<div class="num">2</div>
-	    			<div class="subject">임시 매장 영업 안내</div>
-	    			<div class="id">tmdwl8987</div>
-	    			<div class="date">2020-02-26</div>
-	    		</li>
-	    		<li class="table_tr">
-	    			<div class="num">1</div>
-	    			<div class="subject">개인정보 처리방침 개정 안내(2019년 11월 29일부터 적용)</div>
-	    			<div class="id">tmdwl8987</div>
-	    			<div class="date">2020-02-01</div>
-	    		</li>
-	    	</ul>
-	    	<div class="button button3">
-                <div class="page_wrap">
-                    <a href="javascript:;" class="btnll"><img src="sub_other_img/arrow_ll.gif" alt=""></a>
-                    <a href="javascript:;" class="btnlb"><img src="sub_other_img/arrow_lb.gif" alt=""></a>
-                    <span class="btn">
-                        <a href="javascript:;" class="active">1</a>
-                    </span>
-                    <a href="javascript:;" class="btnrb"><img src="sub_other_img/arrow_rb.gif" alt=""></a>
-                    <a href="javascript:;" class="btnrr"><img src="sub_other_img/arrow_rr.gif" alt=""></a>
-                </div>
-            </div>
-            <div class="btn_wrap">
-            <button type="button" class="btn">글쓰기</button>
-            </div>
-	    </div>
-    </div>  
+    </div> 
     </div>
 </div>
 <footer></footer>
