@@ -49,15 +49,17 @@
     <style>
         body {background: #e1e3e4; width: 100%;}
         #left_nav li:nth-child(2) {color: #a6a6a6;}
-        #menu {width: 80%; margin: 0 auto;}
+        #menu {width: 80%; margin: 0 auto; transition: all 0.5s;}
         #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px;}
         #menu_title div {padding-top: 1vh; padding-bottom: 10vh; width: 40px; margin: 0 auto;}
         #menu_title div img {width: 100%;}
         
         ul.menu_box {overflow: hidden; margin: 0 auto; margin-bottom: 200px; background: #ffffff; padding: 50px 20px;}
-        ul.menu_box li.menu_img {float: left; width: 22%; margin: 1.5%; position: relative; cursor: pointer;}
+        ul.menu_box li.menu_img {float: left; width: 22%; margin: 1.5%; position: relative; cursor: pointer; transition: all 0.5s;}
+        ul.menu_box li.menu_img .scale {overflow: hidden;}
 
-        ul.menu_box li.menu_img img {vertical-align: bottom; width: 100%;}
+        ul.menu_box li.menu_img .scale img {width: 100%; vertical-align: bottom; transition: all 0.5s;}
+        ul.menu_box li.menu_img .scale img:hover {transform: scale(1.1);}
         ul.menu_box li.menu_img .menu_txt {width: 100%; height: 70px; margin: 0 auto; padding: 10px; position: relative; background: #ffffff; border: 2px solid #eeeeee; border-top: 0;}
         ul.menu_box li.menu_img .menu_txt strong {font-size: 16px; padding-bottom: 5px; display: inline-block;}
         ul.menu_box li.menu_img .menu_txt p {font-size: 14px; position: absolute; left: 10px; bottom: 10px;}
@@ -148,7 +150,7 @@
         </div>
         <ul class="menu_box">
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event1.jpg" alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event1.jpg" alt=""></div>
                 <div class="menu_txt">
                     <strong>봄 시즌 마지막 초대권 혜택</strong>
                     <p>2020.05.27 ~ 2020.06.10</p>
@@ -158,7 +160,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event2.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event2.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>가정의 달 혜택! 내 맘대로 BOX</strong>
                     <p>2020.05.27 ~ 2020.06.10</p>
@@ -168,7 +170,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event3.jpg">
+                <div class="scale"><img src="sub_EVENT_img/s_event3.jpg"></div>
                 <div class="menu_txt">
                     <strong>온라인 매드마켓 특별 혜택</strong>
                     <p>2020.05.13 ~ 2020.06.10</p>
@@ -178,7 +180,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event5.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event5.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>정부 긴급재난지원금 사용처 안내</strong>
                     <p>2020.05.13 ~ 2020.06.30</p>
@@ -188,7 +190,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event4.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event4.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>딜리버리 메뉴 15% 할인!</strong>
                     <p>2020.04.01 ~ 2020.06.30</p>
@@ -198,7 +200,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event6.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event6.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>매드포갈릭 셰프 추천 메뉴</strong>
                     <p>2020.03.12 ~ 2020.06.10</p>
@@ -208,7 +210,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event7.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event7.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>봄 신메뉴 출시</strong>
                     <p>2020.03.12 ~ 2020.06.10</p>
@@ -218,7 +220,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event8.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event8.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>봄 시즌 와인 출시</strong>
                     <p>2020.03.12 ~ 2020.06.10</p>
@@ -228,7 +230,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event9.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event9.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>매드포갈릭 20주년 이벤트</strong>
                     <p>2020.03.12 ~ 2020.06.10</p>
@@ -238,7 +240,7 @@
                 </a></div>
             </li>
             <li class="menu_img">
-                <img src="sub_EVENT_img/s_event10.jpg"  alt="">
+                <div class="scale"><img src="sub_EVENT_img/s_event10.jpg"  alt=""></div>
                 <div class="menu_txt">
                     <strong>20주년 기념! 매드스탬프 이벤트!</strong>
                     <p>2020.03.12 ~ 2020.07.31</p>
@@ -250,6 +252,7 @@
         </ul>
     </div>
 </div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
 <footer></footer>
 </body>
 </html>

@@ -11,6 +11,26 @@
          });
      });
     </script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop() >= 500){
+                    $('#gototop').fadeIn();
+                } else {
+                    $('#gototop').fadeOut();
+                }
+            });
+            $('#gototop').mouseover(function(){
+                $(this).find("img").attr('src','index_img/ico_totop1.png');
+            });
+            $('#gototop').mouseleave(function(){
+                $(this).find("img").attr('src','index_img/ico_totop.png');
+            });
+            $('#gototop').click(function(){
+                $('html, body').animate({scrollTop:0},500);
+            });
+        });
+    </script>
     
     <header>
         <div id="header_box">

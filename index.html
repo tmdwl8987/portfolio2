@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>매드포갈릭</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="Basic/css/reset.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
@@ -55,7 +55,7 @@
                         n = 0;
                     }
                     button.eq(n).trigger('click');
-                }, 5000);
+                }, 1000000);
             }
 
             // 슬라이드 넘기기 왼쪽 -> 오른쪽
@@ -94,15 +94,14 @@
                 click:function(){
                     var i = current + 1;
                     if(i >visual.length -1 ) i=0;
-//                    button.eq(i).trigger('click');
-                    move(i);
+                    button.eq(i).trigger('click');
+
                 }
             });
             $("#slide_prev").on({
                 click:function(){
                     var i = current - 1;
                     if(i < 0) i = visual.length -1;
-//                    button.eq(i).trigger('click');
                     move_pre(i);
                 }
             });
@@ -112,7 +111,7 @@
                     if( direction == "left" ) {
                         var i = current + 1;
                         if(i >visual.length -1 ) i=0;
-                        move(i);
+                        button.eq(i).trigger('click');
                     } else if( direction == "right" ) {
                         var i = current - 1;
                         if(i < 0) i = visual.length -1;
@@ -191,15 +190,6 @@
     <header></header>
     <div id="m_header"></div>
     <div id="slide">
-<!--
-        <div id="slide_img">
-            <ul>
-                <li><img src="index_img/b_slide1.png" alt=""></li>
-                <li><img src="index_img/b_slide2.png" alt=""></li>
-                <li><img src="index_img/b_slide3.png" alt=""></li>
-            </ul>
-        </div>
--->
         <div id="brandVisual">
            <ul>
                <li class="visual01"><a href="javascript:;">베너1</a></li>
@@ -355,28 +345,28 @@
        <div id="article5">
             <ul>
                 <li>
-                    <img src="sub_EVENT_img/s_event3.jpg" alt="온라인 매드마켓 특별 혜택">
+                    <div class="scale"><img src="sub_EVENT_img/s_event3.jpg" alt="온라인 매드마켓 특별 혜택"></div>
                     <p>온라인 매드마켓 특별 혜택</p>
                     <div class="hover_wrap">
                         <div class="hover_data"><a href="event_sub3.html">자세히 보기</a></div>
                     </div>
                 </li>
                 <li>
-                    <img src="sub_EVENT_img/s_event5.jpg" alt="정부 긴급재난지원금 사용처 안내">
+                    <div class="scale"><img src="sub_EVENT_img/s_event5.jpg" alt="정부 긴급재난지원금 사용처 안내"></div>
                     <p>정부 긴급재난지원금 사용처안내</p>
                     <div class="hover_wrap">
                         <div class="hover_data"><a href="event_sub5.html">자세히 보기</a></div>
                     </div>
                 </li>
                 <li>
-                    <img src="sub_EVENT_img/s_event4.jpg" alt="딜리버리 메뉴 15% 할인!">
+                    <div class="scale"><img src="sub_EVENT_img/s_event4.jpg" alt="딜리버리 메뉴 15% 할인!"></div>
                     <p>딜리버리 메뉴 15% 할인!</p>
                     <div class="hover_wrap">
                         <div class="hover_data"><a href="event_sub4.html">자세히 보기</a></div>
                     </div>
                 </li>
                 <li>
-                    <img src="sub_EVENT_img/s_event9.jpg" alt="매드포갈릭 20주년 이벤트">
+                    <div class="scale"><img src="sub_EVENT_img/s_event9.jpg" alt="매드포갈릭 20주년 이벤트"></div>
                     <p>매드포갈릭 20주년 이벤트</p>
                     <div class="hover_wrap">
                         <div class="hover_data"><a href="event_sub9.html">자세히 보기</a></div>
@@ -386,6 +376,7 @@
        </div>
     </div>
 </div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
 <footer></footer>
 </body>
 </html>

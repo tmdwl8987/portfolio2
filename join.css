@@ -1,7 +1,7 @@
 #right_nav li:nth-child(2) {color: #a6a6a6;}
 input {-webkit-appearance: none; -webkit-border-radius: 0;}
 textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
-#join_wrap {width: 1200px; margin: 0 auto;}
+#join_wrap {width: 1200px; margin: 0 auto; transition: all 0.5s;}
 #join_wrap h1 {text-align: center; border-bottom: 2px solid #e1e3e4; padding-top: 80px; padding-bottom: 20px; font-size: 32px;}
 .join_container {overflow: hidden;}
 .join_container h2 {width: 20%; display: inline-block; padding-top: 90px; font-size: 24px; text-align: center;}
@@ -70,7 +70,7 @@ textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
 .join_box3 .im_box2 div:nth-child(3) div input[class="chk2"]:checked +label span {background: url(sub_other_img/check.png) no-repeat; background-size: 100%; border: 0;}
 .join_box3 .im_box2 div:nth-child(3) div label strong {margin-right: 20px;}
 
-.finish_box {text-align: center; margin-top: 80px; margin-bottom: 230px;}
+.finish_box {text-align: center; margin-top: 80px; margin-bottom: 200px;}
 .finish_box input[type="button"] {border: 0; width: 30%; padding: 10px 0px; font-size: 18px;}
 .finish_box input[name="finish"] {background: #a3171b; color: #fff; margin-left: 10px; cursor: pointer;}
 .finish_box input[name="finish"]:focus {outline: none;}
@@ -97,7 +97,7 @@ textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
 .join_box3 .im_box2 div:nth-child(3) span strong {font-size: 11px;}
 }
 
-@media screen and (min-width:640px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
 #join_wrap {width: 90%; margin: 0 auto;}
 .join_box2 .im_box {width: 100%;}
 .join_box3 .im_box2 {width: 100%;}
@@ -116,7 +116,7 @@ textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
 .join_box3 .im_box2 div:nth-child(3) span strong {font-size: 11px;}
 }
 
-@media screen and (max-width:639px) {
+@media screen and (max-width:767px) {
 #m_header_box div:nth-child(1) a img {display: none;}
 #m_header_box div:nth-child(2) a img {display: block;}
 #m_header_box ul #join {display: block; position: absolute; right: 55px; top: 22px;}

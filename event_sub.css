@@ -1,11 +1,11 @@
 body {background: #e1e3e4; width: 100%;}
 #left_nav li:nth-child(4) {color: #a6a6a6;}
-#event_wrap {width: 1200px; margin: 0 auto;}
+#event_wrap {width: 1200px; margin: 0 auto; transition: all 0.5s;}
 
 div.event_box {width: 100%; overflow: hidden; margin-top: 100px; margin-bottom: 200px; background: #ffffff; padding: 50px 10%;}
-div.event_box .event_txt { position: relative;}
+div.event_box .event_txt {position: relative; transition: all 0.5s;}
 div.event_box .event_txt h3 {padding-top: 20px; padding-bottom: 15px; font-size: 20px;}
-div.event_box .event_txt h2 {padding-bottom: 50px; font-size: 28px;}
+div.event_box .event_txt h2 {padding-bottom: 50px; font-size: 28px; transition: all 0.5s;}
 div.event_box .event_txt p {font-size: 16px; position: absolute; right: 0; top: 75px;}
 div.event_box .event_img {}
 div.event_box .event_img img {width: 100%;}

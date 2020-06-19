@@ -1,8 +1,8 @@
 body {font-family: 'NanumSquare','나눔스퀘어'; width: 100%;}
-#wrap {min-height: calc(100vh - 170px);}
+#wrap {min-height: 100vh;}
 header {width: 100%; background: #212121;}
-#header_box {background: url(index_img/brand.PNG) no-repeat; background-size: cover; width: 80%; height: 180px; margin: 0 auto; position: relative;}
-nav {background: rgba(33,33,33,0.5); width: 100%; height: 80px; line-height: 80px; color: #fff; position: relative; left: 0; top: 30px; }
+#header_box {background: url(index_img/brand.PNG) no-repeat; background-size: cover; width: 80%; height: 180px; margin: 0 auto; position: relative; transition: all 0.5s;}
+nav {background: rgba(33,33,33,0.5); width: 100%; height: 80px; line-height: 80px; color: #fff; position: relative; left: 0; top: 30px; transition: all 0.5s;}
 #left_nav {position: relative; left: 0; top: 0px;}
 #left_nav:after {content: ""; display: block; clear: both;}
 #left_nav li {float: left; padding: 0px 15px;}
@@ -25,35 +25,28 @@ nav div #main_logo {position: absolute; left: calc(50% - 230px / 2); top: 25px; 
 #header_text {color: #fff; width: 800px; text-align: center; margin: 0 auto; margin-top: 55px; font-size: 18px;}
 #m_header {display: none;}
 
-
 /*---------------------------------------------------------------------------*/
 #slide {width: 100%; height: 100%; position: relative;}
-#brandVisual {position: relative; width: 80%; height: 95vh; margin: 0 auto; overflow: hidden;}
-#brandVisual ul {position: relative; float: left; width: 100%; height: 95vh; margin: 0px; padding: 0px;}
-#brandVisual ul li {position: absolute; width: 100%; height: 95vh;}
+#brandVisual {position: relative; width: 80%; height: 830px; margin: 0 auto; overflow: hidden; transition: all 0.5s;}
+#brandVisual ul {position: relative; float: left; width: 100%; height: 830px; margin: 0px; padding: 0px;}
+#brandVisual ul li {position: absolute; width: 100%; height: 830px;}
 #brandVisual ul li a {display: block; text-indent: -9999px;}
-#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: cover;}
-#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: cover;}
-#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: cover;}
-/*
-#slide_img ul {width: 100%; height: 100%; margin: 0 auto; position: relative; overflow: hidden;}
-#slide_img ul li {position: absolute;}
-#slide_img ul li img {width: 100%;}
-높이 %가 안먹음. px로 해야하는데 slide 하기위해서는 필수
-*/
+#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: 100% 830px;}
+#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: 100% 830px;}
+#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: 100% 830px;}
 #buttonList:after {content: ""; display: block; clear: both;}
 #buttonList li {
     background: url(index_img/slide_button.png) 0 -16px no-repeat; width: 15px; height: 15px; background-size: cover; float: left; position: relative; left: 48%; top: -60px; overflow: hidden; margin: 0 10px; cursor: pointer;
 }
 #buttonList li.on {background-position: 0 0;}
 #buttonList li a {display: block; text-indent: -9999px;}
-#slide_next {position: absolute; top: 50%; right: 250px;}
-#slide_prev {position: absolute; top: 50%; left: 260px;}
+#slide_next {position: absolute; top: 50%; right: 11%;}
+#slide_prev {position: absolute; top: 50%; left: 11%;}
 .slide_arrow img {width: 80%;}
 
 
 /*---------------------------------------------------------------------------*/
-.section {width: 80%; margin: 0 auto;}
+.section {width: 80%; margin: 0 auto; transition: all 0.5s;}
 .section_name {overflow: hidden; margin-top: 100px; margin-bottom: 20px;}
 .section_name div {display: none;}
 .section_name h1 {display: inline-block; font-size: 30px;}
@@ -83,7 +76,7 @@ nav div #main_logo {position: absolute; left: calc(50% - 230px / 2); top: 25px; 
 
 
 .section3 {overflow: hidden; margin-top: 100px;}
-#article3_title {width: 26%; float: left; background: url(index_img/section3.png) no-repeat; background-size: 100%; display: table; margin-right: 40px; height: 297px;}
+#article3_title {width: 26%; float: left; background: url(index_img/section3.png) no-repeat; background-size: 100%; display: table; margin-right: 40px; height: 297px; transition: all 0.5s;}
 #article3_title_box {background: rgba(255,255,255,0.7); display: table-cell; vertical-align: middle; padding-left: 10px;}
 #article3_title_box h1 {font-size: 30px; padding-bottom: 20px;}
 #article3_title_box h1 a {cursor: default;}
@@ -118,8 +111,10 @@ nav div #main_logo {position: absolute; left: calc(50% - 230px / 2); top: 25px; 
 .section5 {margin-bottom: 150px;}
 #article5 ul {display: flex;}
 #article5 ul li {flex: 1; padding: 0px 15px; cursor: pointer; position: relative;}
+#article5 ul li .scale {overflow: hidden;}
 #article5 ul li p {text-align: center; padding-top: 15px; font-weight: bold; font-size: 20px;}
-#article5 ul li img {width: 100%; vertical-align: bottom;}
+#article5 ul li .scale img {width: 100%; vertical-align: bottom; transition: all 0.5s;}
+#article5 ul li .scale img:hover {transform: scale(1.1);}
 
 .hover_wrap {background: rgba(0,0,0,0.8);width: calc(100% - 30px); height: calc(100% - 38px); position: absolute; left: 15px; top: 0; padding: 30px;}
 .hover_wrap .hover_data {margin: 0 auto; margin-top: 30%; padding: 7px 0px; text-align: center; font-size: 17px; background: #eeeeee; color: #212121; font-weight: bold;}
@@ -138,19 +133,22 @@ footer {width: 100%; height: 170px; background: #212121;}
 #right_footer ul li img {padding-right: 10px; width: 25px; vertical-align: bottom;}
 #right_footer ul li:nth-child(2) span {display: inline-block; padding-right: 45px; }
 #right_footer ul li span {display: inline-block; padding-top: 5px; font-size: 12px;}
-
-
+#gototop {position: fixed; bottom: 50px; right: 50px; display: none;}
+#gototop img {width: 55px;}
 
 
 
 /*---------------------------------------------------------------------------*/
 @media screen and (min-width:1600px) and (max-width:1920px) {
-#brandVisual {height: 75vh;}
-#brandVisual ul {height: 75vh;}
-#brandVisual ul li {height: 75vh;}
+#brandVisual {position: relative; width: 90%; height: 800px; margin: 0 auto; overflow: hidden;}
+#brandVisual ul {position: relative; float: left; width: 100%; height: 800px; margin: 0px; padding: 0px;}
+#brandVisual ul li {position: absolute; width: 100%; height: 800px;}
+#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: 100% 800px;}
+#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: 100% 800px;}
+#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: 100% 800px;}
 #buttonList li {left: 48%; top: -50px; margin: 0 8px;}
-#slide_next {top: 45%; right: 180px;}
-#slide_prev {top: 45%; left: 190px;}
+#slide_next {top: 45%; right: 7%;}
+#slide_prev {top: 45%; left: 7%;}
 .slide_arrow img {width: 80%;}
 }
 
@@ -172,12 +170,15 @@ nav div #main_logo {left: calc(50% - 200px / 2); ; top: 20px; width: 200px;}
 #right_nav li:nth-child(4) {margin-right: 15px; line-height: 20px; padding: 5px 10px; left: 0; top: 20px;}
 #header_text {width: 800px; margin-top: 45px; font-size: 17px;}
 
-#brandVisual {height: 60vh;}
-#brandVisual ul {height: 60vh;}
-#brandVisual ul li {height: 60vh;}
+#brandVisual {position: relative; width: 100%; height: 670px; margin: 0 auto; overflow: hidden;}
+#brandVisual ul {position: relative; float: left; width: 100%; height: 670px; margin: 0px; padding: 0px;}
+#brandVisual ul li {position: absolute; width: 100%; height: 670px;}
+#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: 100% 670px;}
+#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: 100% 670px;}
+#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: 100% 670px;}
 #buttonList li {left: 48%; top: -40px; margin: 0 7px;}
-#slide_next {top: 45%; right: 150px;}
-#slide_prev {top: 45%; left: 160px;}
+#slide_next {top: 45%; right: 3%;}
+#slide_prev {top: 45%; left: 3%;}
 .slide_arrow img {width: 70%;}
     
     
@@ -227,6 +228,8 @@ nav div #main_logo {left: calc(50% - 200px / 2); ; top: 20px; width: 200px;}
 .hover_wrap {background: rgba(0,0,0,0.8);width: calc(100% - 20px); height: calc(100% - 29px); position: absolute; left: 10px; top: 0; padding: 25px;}
 .hover_wrap .hover_data {margin: 0 auto; margin-top: 25%; padding: 5px 0px; text-align: center; font-size: 14px; background: #eeeeee; color: #212121; font-weight: bold;}
 .hover_wrap .hover_data:hover {background: #a3171b; color: #eeeeee;}
+#gototop {position: fixed; bottom: 45px; right: 45px; display: none;}
+#gototop img {width: 45px;}
 }
 
 
@@ -247,12 +250,15 @@ nav div #main_logo {left: calc(50% - 150px / 2); top: 20px; width: 150px;}
 #right_nav li:nth-child(4) {margin-right: 8px; line-height: 20px; padding: 5px 10px; left: 0; top: 17px;}
 #header_text {width: 740px; margin-top: 45px; font-size: 15px;}
     
-#brandVisual {height: 380px;}
-#brandVisual ul {height: 380px;}
-#brandVisual ul li {height: 380px;}
+#brandVisual {position: relative; width: 100%; height: 550px; margin: 0 auto; overflow: hidden;}
+#brandVisual ul {position: relative; float: left; width: 100%; height: 550px; margin: 0px; padding: 0px;}
+#brandVisual ul li {position: absolute; width: 100%; height: 550px;}
+#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: 100% 550px;}
+#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: 100% 550px;}
+#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: 100% 550px;}
 #buttonList li {background: url(index_img/slide_button.png) 0 -14px no-repeat; width: 13px; height: 13px; background-size: 100%; float: left; position: relative; overflow: hidden; left: 48%; top: -35px; margin: 0 5px;}
-#slide_next {top: 45%; right: 110px;}
-#slide_prev {top: 45%; left: 120px;}
+#slide_next {top: 45%; right: 2%;}
+#slide_prev {top: 45%; left: 2%;}
 .slide_arrow img {width: 60%;}
      
 
@@ -302,6 +308,8 @@ nav div #main_logo {left: calc(50% - 150px / 2); top: 20px; width: 150px;}
 .hover_wrap {background: rgba(0,0,0,0.8);width: calc(100% - 20px); height: calc(100% - 24px); position: absolute; left: 10px; top: 0; padding: 25px;}
 .hover_wrap .hover_data {margin: 0 auto; margin-top: 25%; padding: 5px 0px; text-align: center; font-size: 11px; background: #eeeeee; color: #212121; font-weight: bold;}
 .hover_wrap .hover_data:hover {background: #a3171b; color: #eeeeee;}
+#gototop {position: fixed; bottom: 40px; right: 40px; display: none;}
+#gototop img {width: 40px;}
 }
 
 
@@ -322,15 +330,15 @@ nav div #main_logo {left: calc(50% - 130px / 2); top: 20px; width: 130px;}
 #right_nav li:nth-child(4) {margin-right: 4px; line-height: 20px; padding: 3px 8px; left: 0; top: 17px;}
 #header_text {width: 540px; margin-top: 40px; font-size: 13px;}
     
-#brandVisual {width: 90%; height: 45vh;}
-#brandVisual ul {height: 45vh;}
-#brandVisual ul li {height: 45vh;}
-#brandVisual .visual01 {background-size: 100%;}
-#brandVisual .visual02 {background-size: 100%;}
-#brandVisual .visual03 {background-size: 100%;}
+#brandVisual {position: relative; width: 100%; height: 400px; margin: 0 auto; overflow: hidden;}
+#brandVisual ul {position: relative; float: left; width: 100%; height: 400px; margin: 0px; padding: 0px;}
+#brandVisual ul li {position: absolute; width: 100%; height: 400px;}
+#brandVisual .visual01 {left: 0px; background: url(index_img/b_slide1.png) no-repeat; background-size: 100% 400px;}
+#brandVisual .visual02 {left: 100%; background: url(index_img/b_slide2.png) no-repeat; background-size: 100% 400px;}
+#brandVisual .visual03 {left: 200%; background: url(index_img/b_slide3.png) no-repeat; background-size: 100% 400px;}
 #buttonList li {display: none;}
-#slide_next {top: 40%; right: 40px;}
-#slide_prev {top: 40%; left: 60px;}
+#slide_next {top: 40%; right: 2%;}
+#slide_prev {top: 40%; left: 2%;}
 .slide_arrow img {width: 50%;}
 
     
@@ -389,6 +397,8 @@ nav div #main_logo {left: calc(50% - 130px / 2); top: 20px; width: 130px;}
 .hover_wrap {background: rgba(0,0,0,0.8);width: calc(100% - 20px); height: calc(100% - 24px); position: absolute; left: 10px; top: 0; padding: 25px;}
 .hover_wrap .hover_data {margin: 0 auto; margin-top: 25%; padding: 5px 0px; text-align: center; font-size: 11px; background: #eeeeee; color: #212121; font-weight: bold;}
 .hover_wrap .hover_data:hover {background: #a3171b; color: #eeeeee;}
+#gototop {position: fixed; bottom: 30px; right: 30px; display: none;}
+#gototop img {width: 40px;}
 }
 
 
@@ -425,15 +435,15 @@ header {display: none;}
 #m_nav_left .m_sub_nav {_display: none; width: 50%; height: 100%; position: absolute; top: 0; right: -50%; background: #a6a6a6; z-index: 20;}
 
    
-#brandVisual {width: 100%; height: 800px;}
-#brandVisual ul {height: 800px;}
-#brandVisual ul li {height: 800px;}
-#brandVisual .visual01 {background: url(index_img/m_slide1.png) no-repeat; background-size: 100%;}
-#brandVisual .visual02 {background: url(index_img/m_slide2.png) no-repeat; background-size: 100%;}
-#brandVisual .visual03 {background: url(index_img/m_slide3.png) no-repeat; background-size: 100%;}
+#brandVisual {width: 100%; height: 850px;}
+#brandVisual ul {height: 850px;}
+#brandVisual ul li {height: 850px;}
+#brandVisual .visual01 {background: url(index_img/m_slide1.png) no-repeat; background-size: 100% 850px;}
+#brandVisual .visual02 {background: url(index_img/m_slide2.png) no-repeat; background-size: 100% 850px;}
+#brandVisual .visual03 {background: url(index_img/m_slide3.png) no-repeat; background-size: 100% 850px;}
 #buttonList li {display: none;}
-#slide_next {top: 40%; right: 0px;}
-#slide_prev {top: 40%; left: 20px;}
+#slide_next {top: 50%; right: 2%;}
+#slide_prev {top: 50%; left: 2%;}
 .slide_arrow img {width: 50%;}
 
 
@@ -524,6 +534,9 @@ footer {width: 100%; height: 190px; background: #212121;}
 #right_footer ul li img {padding-right: 7px; width: 20px; vertical-align: bottom;}
 #right_footer ul li:nth-child(2) span {display: inline-block; padding-right: 25px; }
 #right_footer ul li span {display: inline-block; font-size: 11px;}
+    
+#gototop {position: fixed; bottom: 30px; right: 30px; display: none;}
+#gototop img {width: 0px;}
 }
 
 
@@ -562,15 +575,15 @@ header {display: none;}
 #m_nav_left .m_sub_nav {width: 50%; height: 100%; background: #a6a6a6; position: absolute; top: 0; right: -50%; z-index: 20; _display: none;}
     
     
-#brandVisual {width: 100%; height: 570px;}
-#brandVisual ul {height: 570px;}
-#brandVisual ul li {height: 570px;}
+#brandVisual {width: 100%; height: 600px;}
+#brandVisual ul {height: 600px;}
+#brandVisual ul li {height: 600px;}
 #brandVisual .visual01 {background: url(index_img/m_slide1.png) no-repeat; background-size: 100%;}
 #brandVisual .visual02 {background: url(index_img/m_slide2.png) no-repeat; background-size: 100%;}
 #brandVisual .visual03 {background: url(index_img/m_slide3.png) no-repeat; background-size: 100%;}
 #buttonList li {display: none;}
-#slide_next {top: 40%; right:0px;}
-#slide_prev {top: 40%; left: 20px;}
+#slide_next {top: 40%; right: 2%;}
+#slide_prev {top: 40%; left: 2%;}
 .slide_arrow img {width: 50%;}
 
     
@@ -661,4 +674,6 @@ footer {width: 100%; height: 210px; background: #212121;}
 #right_footer ul li img {padding-right: 7px; width: 20px; vertical-align: bottom;}
 #right_footer ul li:nth-child(2) span {display: inline-block; padding-right: 25px; }
 #right_footer ul li span {display: inline-block; font-size: 10px;}
+#gototop {position: fixed; bottom: 30px; right: 30px; display: none;}
+#gototop img {width: 0px;}
 }

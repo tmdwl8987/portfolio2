@@ -1,6 +1,6 @@
         body {background: #e1e3e4; width: 100%; height: 100%;}
         #left_nav li:nth-child(2) {color: #a6a6a6;}
-        #menu {width: 80%; margin: 0 auto;}
+        #menu {width: 80%; margin: 0 auto; transition: all 0.5s;}
         #menu_title h1 {text-align: center; padding-top: 7vh; font-size: 34px}
         #menu_title div {padding-top: 1vh; width: 40px; margin: 0 auto;}
         #menu_title div img {width: 100%;}

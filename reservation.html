@@ -19,6 +19,7 @@
             $("footer").load("footer.html");
         });
     </script>
+    
     <script>
         $(document).ready(function(){
             $("#plus").click(function(e){
@@ -31,6 +32,7 @@
                 }
                 $("#number").text(num);
             });
+            
             $("#minus").click(function(e){
                 var stat = $("#number").text();
                 var num = parseInt (stat,10);
@@ -40,24 +42,18 @@
                 }
                 $("#number").text(num);
             });
-            $("#calendar tr td").click(function(){
-                console.log("active");
-//                $("#calendar tr td").css("bacground-color","transparent !important");
-//                $(this).css("background-color","#eeeeee");
-                $("#calendar tr td").removeClass("active");
-                $(this).not('#calendar tr:nth-child(1) td').not('#calendar tr:nth-child(2) td').addClass("active");
-            })
+            
             $(".rv_container3 .rv_box3 ul li").click(function(){
                 $(".rv_container3 .rv_box3 ul li").removeClass("active2");
                 $(this).addClass("active2");
-                
-            })
+            });
         });
     </script>
+    
     <script type="text/javascript">
-            var today = new Date();
-            var date = new Date();
-            function prevCalendar(){
+            var today = new Date(); //오늘 날짜
+            var date = new Date(); //today의 date를 세어주는 역할
+            function prevCalendar(){ //이전 달
                 today = new Date(today.getFullYear(),today.getMonth() -1, today.getDate());
                 buildCalendar();
             }
@@ -66,35 +62,40 @@
                 buildCalendar();
             }
             function buildCalendar(){
-                var doMonth = new Date(today.getFullYear(),today.getMonth(),1);
-                var lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
-                var tdCalendar = document.getElementById("calendar");
-                var tdCalendarYM = document.getElementById("tdCalendarYM");
+                var doMonth = new Date(today.getFullYear(),today.getMonth(), 1); //이번 달의 첫째 날
+                var lastDate = new Date(today.getFullYear(),today.getMonth()+1, 0); //이번 달의 마지막 날
+                var tdCalendar = document.getElementById("calendar"); //날짜 찍을 테이블 변수만듬, 일까지 찍힘
+                var tdCalendarYM = document.getElementById("tdCalendarYM"); //yyyy년 mm월
                 tdCalendarYM.innerHTML = today.getFullYear() + "년 " + (today.getMonth()+1) + "월";
+                // innerHTML : js언어를 html의 권장 표준 언어로 바꾼다.
 
-                while (tdCalendar.rows.length > 2) {
+                while (tdCalendar.rows.length > 2) { //이번달이 끝나면 다음달로 넘겨주는 역할
                     tdCalendar.deleteRow(tdCalendar.rows.length-1);
                 }
+                
                 var row = null;
-                row = tdCalendar.insertRow();
-                var cnt = 0;
+                row = tdCalendar.insertRow(); // 테이블에 새로운 열 삽입. 즉, 초기화
+                var cnt = 0;  //셀의 갯수를 세어주는 역할
                 for (i=0; i<doMonth.getDay(); i++) {
-                    cell = row.insertCell();
-                    cnt = cnt + 1;
+                    cell = row.insertCell(); //열 한칸한칸 계속 만들어주는 역할
+                    cnt = cnt + 1; //열의 갯수를 계속 다음으로 위치하게 해주는 역할
                 }
+                
+                
+                
                 for (i=1; i<=lastDate.getDate(); i++) {
                     cell = row.insertCell();
-                    cell.innerHTML = i;
+                    cell.innerHTML = i; // 셀을 1부터 마지막 day까지 html 문법에 넣어줌
                     
-                    cell.innerHTML = "<div id=aa>" + i;
+                    cell.innerHTML = "<div id=active_box>" + i;
                     
                     cnt=cnt+1;
                     if(cnt%7 == 1){
-                        cell.innerHTML = "<font color=#f03a40>" + i
+                        cell.innerHTML = "<font color=#f03a40><div id=active_box>" + i
                     }
                     if(cnt%7 == 0){
-                        cell.innerHTML = "<font color=#0084ff>" + i
-                        row = calendar.insertRow();
+                        cell.innerHTML = "<font color=#0084ff><div id=active_box>" + i
+                        row = calendar.insertRow(); // 토요일 다음에 올 셀을 추가
                     }
                     if (today.getFullYear() == date.getFullYear()
                        && today.getMonth() == date.getMonth()
@@ -103,15 +104,14 @@
                     }
                 }
                 
-                var cols = document.querySelectorAll('#aa');
+                var cols = document.querySelectorAll('#active_box');
                 [].forEach.call(cols,function(col){
                     col.addEventListener("click",click,false);
                 });
                 function click(e){
-                    $('#calendar tr td div').removeClass("bb");
-                    $(this).addClass("bb");
+                    $('#calendar tr td div').removeClass("active");
+                    $(this).addClass("active");
                 }
-                
             }
     </script>
 </head>
@@ -245,6 +245,7 @@
         </div>
     </div>
 </div>
+<div id="gototop"><img src="index_img/ico_totop.png" alt="gototop"></div>
 <footer></footer>
 </body>
 </html>
