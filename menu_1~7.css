@@ -27,34 +27,6 @@
         .hover_wrap_menu .hover_origin_menu {color: #a6a6a6; margin-top: 25px; border: 1px solid #a6a6a6; display: inline-block; padding: 3px; font-weight: bold;}
 
 
-        .line01 {width: 0px; height: 3px; background: #6702e2; position: absolute; left: 0; top: 0; animation-name: line1;}
-        .line02 {width: 3px; height: 0px; background: #6702e2; position: absolute; right: 0; top: 0; animation-name: line2;}
-        .line03 {width: 0px; height: 3px; background: #6702e2; position: absolute; bottom: 0; right: 0; animation-name: line3;}
-        .line04 {width: 3px; height: 0px; background: #6702e2; position: absolute; bottom: 0; left: 0; animation-name: line4;}
-        .line01, .line02, .line03, .line04 {
-            animation-duration: 0.2s;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-        }
-        @keyframes line1{
-            from {width: 0px;}
-            to {width: calc(100% - 25px);}
-        }
-        @keyframes line2{
-            from {height: 0px;}
-            to {height: calc(100% - 50px);}
-        }
-        @keyframes line3{
-            from {width: 0px;}
-            to {width: calc(100% - 25px);}
-        }
-        @keyframes line4{
-            from {height: 0px;}
-            to {height: calc(100% - 50px);}
-        }
-
-
-
         @media screen and (min-width:1280px) and (max-width:1599px) {
             #menu_box td .menu_txt {height: 70px;}
             #menu_box td .menu_txt strong {font-size: 14px;}

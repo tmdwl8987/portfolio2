@@ -51,28 +51,6 @@
     });
     </script>
     
-    <script>
-        $(document).ready(function(){
-            var line = $(".line01, .line02, .line03, .line04")
-            line.hide();
-            
-            $("#menu_box tr td").mouseenter(function(){
-                var i = $(this).index();
-                $(".line01").eq(i).show();
-                $(".line02").eq(i).show();
-                $(".line03").eq(i).show();
-                $(".line04").eq(i).show();
-            });
-            $("#menu_box tr td").mouseleave(function(){
-                var i = $(this).index();
-                $(".line01").eq(i).hide();
-                $(".line02").eq(i).hide();
-                $(".line03").eq(i).hide();
-                $(".line04").eq(i).hide();
-            });
-        });
-    </script>
-    
     <style>
     #m_header_box div:nth-child(1) a img {display: none;}
     #m_header_box div:nth-child(2) a img {display: block;}
@@ -107,10 +85,6 @@
                         <p>49,800
                         </p>
                     </div>
-                    <div class="line01"></div>
-                    <div class="line02"></div>
-                    <div class="line03"></div>
-                    <div class="line04"></div>
                 </td>
                 <td>
                     <div class="menu_img">
