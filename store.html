@@ -23,8 +23,9 @@
     <style>
         body {background: #e1e3e4; width: 100%; height: 100%;}
         #left_nav li:nth-child(5) {color: #a6a6a6;}
+        #wrap {width: 100%; margin: 0 auto;}
         #store_wrap {width: 80%; margin: 0 auto; min-height: 100%; position: relative; transition: all 0.5s;}
-        #map {width: 100%; height: 700px;}
+        #map {width: 100%; height: 700px; margin-bottom: 150px;}
         
         
 /*        @media screen and (min-width:1280px) and (max-width:1599px) {}*/
@@ -66,7 +67,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 var positions = [
     {
         content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">가산현대아울렛점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-2136-9982</div>', 
-        latlng: new kakao.maps.LatLng(37.477902, 126.889176)
+        latlng: new kakao.maps.LatLng(37.477902, 126.889176),
     },
     {
         content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">강남삼성타운점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-585-1175</div>', 
@@ -85,7 +86,7 @@ var positions = [
         latlng: new kakao.maps.LatLng(37.487352, 127.049795)
     },
     {
-        content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">롯데시네마월드타워점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-3213-3044</div>',
+        content: '<div style="color:#fff; background:#525252; width:180px; padding:5px 0px; text-align:center; font-size:14px;">롯데시네마월드타워점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-3213-3044</div>',
         latlng: new kakao.maps.LatLng(37.513204, 127.103455)
     },
     {
@@ -97,7 +98,7 @@ var positions = [
         latlng: new kakao.maps.LatLng(37.557939, 126.841105)
     },
     {
-        content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">봉은사아이파크타워점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-538-6103</div>',
+        content: '<div style="color:#fff; background:#525252; width:180px; padding:5px 0px; text-align:center; font-size:14px;">봉은사아이파크타워점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-538-6103</div>',
         latlng: new kakao.maps.LatLng(37.513247, 127.055924)
     },
     {
@@ -121,7 +122,7 @@ var positions = [
         latlng: new kakao.maps.LatLng(37.499457, 127.033714)
     },
     {
-        content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">영등포타임스퀘어점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-2637-3040</div>',
+        content: '<div style="color:#fff; background:#525252; width:170px; padding:5px 0px; text-align:center; font-size:14px;">영등포타임스퀘어점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-2637-3040</div>',
         latlng: new kakao.maps.LatLng(37.517436, 126.902878)
     },
     {
@@ -133,7 +134,7 @@ var positions = [
         latlng: new kakao.maps.LatLng(37.560780, 127.038284)
     },    
     {
-        content: '<div style="color:#fff; background:#525252; width:148px; padding:5px 0px; text-align:center; font-size:14px;">용산아이파크몰점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-2012-0526</div>',
+        content: '<div style="color:#fff; background:#525252; width:160px; padding:5px 0px; text-align:center; font-size:14px;">용산아이파크몰점</div><div style="padding:5px 0px; text-align:center; font-size:13px;">02-2012-0526</div>',
         latlng: new kakao.maps.LatLng(37.529717, 126.965868)
     },
     {
@@ -160,19 +161,23 @@ for (var i = 0; i < positions.length; i ++) {
         map: map, // 마커를 표시할 지도
         position: positions[i].latlng, // 마커를 표시할 위치
         title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지 
+        image : markerImage, // 마커 이미지 
+        clickable: true // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
     });
-
+    
+    var iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+    
     // 마커에 표시할 인포윈도우를 생성합니다 
     var infowindow = new kakao.maps.InfoWindow({
-        content: positions[i].content // 인포윈도우에 표시할 내용
+        content: positions[i].content, // 인포윈도우에 표시할 내용
+        removable: iwRemoveable
     });
 
     // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
     // 이벤트 리스너로는 클로저를 만들어 등록합니다 
     // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
-    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow)); 
+    kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+/*    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow)); */
 }
 
 // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
@@ -183,11 +188,11 @@ function makeOverListener(map, marker, infowindow) {
 }
 
 // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-function makeOutListener(infowindow) {
+/*function makeOutListener(infowindow) {
     return function() {
         infowindow.close();
     };
-}
+}*/
         </script>
     </div>
 </div>
