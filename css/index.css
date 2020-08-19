@@ -1,4 +1,4 @@
-body {font-family: 'NanumSquare','나눔스퀘어'; width: 100%;}
+body {font-family: 'NanumSquare','나눔스퀘어'; width: 100%; cursor: default;}
 #wrap {min-height: 100%;}
 header {width: 100%; background: #212121;}
 #header_box {background: url(../index_img/brand.PNG) no-repeat; background-size: cover; width: 80%; height: 180px; margin: 0 auto; position: relative; transition: all 0.5s;}
@@ -52,7 +52,7 @@ nav div #main_logo {position: absolute; left: calc(50% - 230px / 2); top: 25px; 
 .section_name h1 {display: inline-block; font-size: 30px;}
 .section_name h1 a {cursor: default;}
 .section_name p {float: right; border-bottom: 1px solid black; padding-bottom: 3px; font-size: 26px;}
-.section_name p:hover {font-weight: bold; border-bottom: 2px solid black;}
+.section_name p:hover {font-weight: bold;}
 
 
 #article1 {overflow: hidden; width: 100%; display: table;}
